@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .footer {
   display: flex;
   justify-content: center;
@@ -7,7 +9,7 @@
   border-top: 1px solid #eaeaea;
 
   a {
-    color: hotpink;
+    color: $primary-color;
   }
 }
 
