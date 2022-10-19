@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Footer from '../components/Footer';
-
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Rick Hekman
+           Rick Hekman 
         </h1>
 
         <p className={styles.description}>
