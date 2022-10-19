@@ -6,16 +6,6 @@ const path = require('path')
         }
     }
 
-// module.exports = (phase, {defaultConfig}) => {
-//   if ('sassOptions' in defaultConfig) {
-//       defaultConfig['sassOptions'] = {
-//           includePaths: ['/styles'],
-//           prependData: `@import "~@styles/main.scss";`,
-//       }
-//   }
-//   return defaultConfig;
-// }
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
