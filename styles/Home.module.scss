@@ -1,3 +1,5 @@
+@import '_variables.scss';
+
 .container {
   padding: 0 2rem;
 }
@@ -13,5 +15,6 @@
 }
 
 .title {
+  font-size: $font-size--huge;
   margin: 0;  
 }
