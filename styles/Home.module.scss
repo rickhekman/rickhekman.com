@@ -18,3 +18,51 @@
   font-size: $font-size--huge;
   margin: 0;  
 }
+
+
+.avatar {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  margin-top: 2em;
+  overflow: hidden;
+  object-fit: cover;
+  transition: 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+  
+  &:hover {
+    border-radius: 3%;  
+    animation: wiggle 2s linear both;
+  }
+
+  img {    
+    bottom: 40% !important;
+    width: 100% !important;
+    height: auto !important; 
+  }
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
