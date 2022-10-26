@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Image from 'next/image';
+
 import Footer from '../components/Footer';
 import styles from '../styles/Home.module.scss'
 
@@ -15,7 +17,15 @@ export default function Home() {
         <h1 className={styles.title}>
            Rick Hekman 
         </h1>        
-        <p>Creative Developer</p>    
+        <p>Creative Developer</p>
+        <div className={styles.avatar}>
+          <Image 
+            alt='Rick Hekman avatar'
+            src='/images/rickhekman.webp'
+            width={400}
+            height={600}          
+          />
+        </div>
       </main>
       <Footer />
     </div>
