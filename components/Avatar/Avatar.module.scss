@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.title {
+  font-size: $font-size--huge;
+  margin: 0;  
+}
+
+.avatar {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  margin-top: 2em;
+  overflow: hidden;
+
+  img {    
+    bottom: 30% !important;
+    width: 100% !important;
+    height: auto !important; 
+    object-fit: contain;
+  }
+}
