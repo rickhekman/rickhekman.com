@@ -4,12 +4,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  flex-direction: column;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
 
   a {
     color: $primary-color;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 3vmin;
+    margin-top: .5em;
+
+    a {
+      width: 1.5em;
+      height: auto;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      transition: filter .4s ease-in-out;
+      filter: brightness(0) saturate(100%) invert(76%) sepia(43%) saturate(3443%) hue-rotate(49deg) brightness(111%) contrast(110%);
+
+      &:hover {
+        filter: none;
+      }    
+    }
   }
 }
 
