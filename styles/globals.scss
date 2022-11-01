@@ -7,10 +7,11 @@ body {
   margin: 0;
   font-family: Poppins, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
 }
 
 body {
-  font-size: $font-size--medium;
   line-height: $line-height--normal; 
 }
 
@@ -82,7 +83,8 @@ h6 {
   margin-bottom: 0;
 }
 
-p {
+p {  
   margin-top: 1.5vmin;
   margin-bottom: 1.5vmin;
+  font-size: $font-size--medium;
 }
