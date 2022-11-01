@@ -14,7 +14,7 @@ export default function Nav() {
             <Link href="/projects">Projects</Link>
           </li>
           <li>
-            <Link href="/instagram">Instagram</Link>
+            <Link href="/visual-diary">Visual diary</Link>
           </li>
         </ul>
       </nav>
