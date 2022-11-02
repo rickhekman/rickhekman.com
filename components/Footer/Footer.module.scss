@@ -1,13 +1,18 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .footer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
   
+  @include respond(mobile) {
+    align-items: center;
+  }
+
   p {
     font-size: $font-size--small;
   }
