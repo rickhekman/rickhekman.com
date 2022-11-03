@@ -1,6 +1,6 @@
 @import 'variables.scss';
-@import 'mixins.scss';
 @import 'typography.scss';
+@import 'themes.scss';
 
 html,
 body {
@@ -25,15 +25,15 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: $secondary-color;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: white;
+//     background: $secondary-color;
+//   }
+// }
 
 /* Typography */
 h1 {
