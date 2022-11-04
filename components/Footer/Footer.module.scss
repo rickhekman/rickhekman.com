@@ -36,11 +36,11 @@
       width: 100%;
       height: 100%;
       transition: filter .4s ease-in-out;
-      // filter: $color-filter-dark;
+      filter: $color-filter-dark;
 
-      @include theme() {
-        filter: theme-get('filter-color');
-      }
+      // @include theme() {
+      //   filter: theme-get('filter-color');
+      // }
 
       &:hover {
         filter: none;
