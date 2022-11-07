@@ -1,12 +1,12 @@
 @import './variables';
 
 $themes: (
-  darkTheme: (
+  dark: (
     'text-color': $color-text-dark,
     'bg-color': $color-bg-dark,
     'filter-color': $color-filter-dark
   ),
-  lightTheme: (
+  light: (
     'text-color': $color-text-light,
     'bg-color': $color-bg-light,
     'filter-color': $color-filter-light
