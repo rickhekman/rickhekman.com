@@ -2,6 +2,18 @@
 $primary-color: #64ff00;
 $secondary-color: #001329;
 
+/* Light Theme Colors */
+$color-bg-light: #f2f2f2;
+$color-text-light: black;
+$color-filter-light: brightness(0) saturate(100%) invert(24%) sepia(96%) saturate(1019%) hue-rotate(162deg) brightness(95%) contrast(102%);
+
+/* Dark Theme Colors */
+$color-bg-dark: #001329;
+$color-text-dark: white;
+$color-filter-dark: brightness(0) saturate(100%) invert(76%) sepia(43%) saturate(3443%) hue-rotate(49deg) brightness(111%) contrast(110%);
+
+
+
 /* Typography */
 $font-size--small: clamp(1em, 1.5vw, 1.125em);
 $font-size--medium: clamp(1.125em, 2vw, 1.25em);

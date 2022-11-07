@@ -1,5 +1,6 @@
 @import '../../styles/variables';
 @import '../../styles/mixins';
+@import '../../styles/themes';
 
 .footer {
   display: flex;
@@ -35,7 +36,11 @@
       width: 100%;
       height: 100%;
       transition: filter .4s ease-in-out;
-      filter: brightness(0) saturate(100%) invert(76%) sepia(43%) saturate(3443%) hue-rotate(49deg) brightness(111%) contrast(110%);
+      filter: $color-filter-dark;
+
+      // @include theme() {
+      //   filter: theme-get('filter-color');
+      // }
 
       &:hover {
         filter: none;

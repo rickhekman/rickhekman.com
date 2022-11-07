@@ -1,6 +1,6 @@
 @import 'variables.scss';
-@import 'mixins.scss';
 @import 'typography.scss';
+@import 'themes.scss';
 
 html,
 body {
@@ -10,6 +10,15 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
+
+  color: $color-text-light;
+  background: $color-bg-light;
+
+ 
+  @include theme() {
+    color: theme-get('text-color');
+    background: theme-get('bg-color');
+  }
 }
 
 body {
@@ -25,15 +34,66 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: $secondary-color;
-  }
-}
+// html {
+
+//   @include theme() {
+//     background-color: theme-get('bg-color');
+//   }
+// }
+
+// html,
+// body {
+ 
+// }
+
+// body {
+// }
+
+// .dark {
+//   body {
+//     // color: #fff;
+//     // background: #000;
+
+//     @include theme() {
+//       color: theme-get('text-color');
+//       background-color: theme-get('bg-color');
+//     }
+//   }
+// } 
+
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+
+//   body {
+//     color: white;
+//     background-color: $secondary-color;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   html {
+//     color-scheme: light;
+//   }
+  
+//   body {
+//     color: $secondary-color;
+//     background-color: white;
+//   }
+// }
+
+// :root {
+//   /* Your default theme */
+//   --background: white;
+//   --foreground: black;
+// }
+
+// [data-theme='dark'] {
+//   --background: rgb(94, 88, 88);
+//   --foreground: white;
+// }
 
 /* Typography */
 h1 {
