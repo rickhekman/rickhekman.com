@@ -11,10 +11,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
 
-  color: $color-text-light;
-  background: $color-bg-light;
-
- 
   @include theme() {
     color: theme-get('text-color');
     background: theme-get('bg-color');
@@ -30,70 +26,18 @@ a {
   text-decoration: none; 
 }
 
+
+svg {
+  @include theme() {
+    filter: theme-get('filter-color');
+    
+  }
+}
+
+
 * {
   box-sizing: border-box;
 }
-
-// html {
-
-//   @include theme() {
-//     background-color: theme-get('bg-color');
-//   }
-// }
-
-// html,
-// body {
- 
-// }
-
-// body {
-// }
-
-// .dark {
-//   body {
-//     // color: #fff;
-//     // background: #000;
-
-//     @include theme() {
-//       color: theme-get('text-color');
-//       background-color: theme-get('bg-color');
-//     }
-//   }
-// } 
-
-
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-
-//   body {
-//     color: white;
-//     background-color: $secondary-color;
-//   }
-// }
-
-// @media (prefers-color-scheme: light) {
-//   html {
-//     color-scheme: light;
-//   }
-  
-//   body {
-//     color: $secondary-color;
-//     background-color: white;
-//   }
-// }
-
-// :root {
-//   /* Your default theme */
-//   --background: white;
-//   --foreground: black;
-// }
-
-// [data-theme='dark'] {
-//   --background: rgb(94, 88, 88);
-//   --foreground: white;
-// }
 
 /* Typography */
 h1 {
