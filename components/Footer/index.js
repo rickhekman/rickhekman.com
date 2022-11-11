@@ -10,7 +10,7 @@ export default function Footer() {
       <footer className={styles.footer}>
         <div>
           <p>
-            Let&#39;s stay in touch: <a href="mailto:info@rickhekman.com">Send me an email</a> or <a href="tel:+31648700448">call me +31 648 700 448</a> 
+            Let&#39;s stay in touch: <a href="mailto:info@rickhekman.com">Send me an email</a> or <a href="tel:+31648700448">call me at +31 648 700 448</a> 
           </p>
         </div>
         <nav className={styles.footer__icons}>
