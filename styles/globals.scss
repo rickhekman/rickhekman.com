@@ -21,19 +21,31 @@ body {
   line-height: $line-height--normal; 
 }
 
+
 a {
   color: inherit;
   text-decoration: none; 
 }
 
-
-svg {
-  @include theme() {
-    filter: theme-get('filter-color');
+footer {
+  p {
+    a {
+      @include theme() {
+        color: theme-get('link-color');    
+      }
     
+      &:hover {
+        filter: saturate(6);
+      }
+    }
+  }
+
+  svg {
+    @include theme() {
+      filter: theme-get('filter-color');    
+    }
   }
 }
-
 
 * {
   box-sizing: border-box;

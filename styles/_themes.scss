@@ -3,11 +3,13 @@
 $themes: (
   dark: (
     'text-color': $color-text-dark,
+    'link-color': $color-link-dark,
     'bg-color': $color-bg-dark,
     'filter-color': $color-filter-dark
   ),
   light: (
     'text-color': $color-text-light,
+    'link-color': $color-link-light,
     'bg-color': $color-bg-light,
     'filter-color': $color-filter-light
   )
@@ -22,6 +24,7 @@ $themes: (
   }
   $theme-map: null !global;
 }
+
 
 @function theme-get($key) {
   @return map-get($theme-map, $key);
