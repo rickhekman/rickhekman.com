@@ -4,4 +4,13 @@
   list-style: none;
   display: flex;
   gap: 5vmin;
+
+  a {   
+    font-size: $font-size--medium;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: #5f9ea0;
+    }
+  }
 }
