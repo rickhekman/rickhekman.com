@@ -15,10 +15,7 @@ export default function Nav() {
           </li>
           <li>
             <Link href="/visual-diary">Visual diary</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
+          </li>          
         </ul>
       </nav>
     </>
