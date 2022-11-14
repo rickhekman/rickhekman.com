@@ -14,7 +14,7 @@ export default function Footer() {
           </p>
         </div>
         <nav className={styles.footer__icons}>
-          <a href="https://github.com/rickhekman" rel="noopener noreferrer" target="_blank" aria-label="Rick Hekman on GitHub">
+          <a href="https://github.com/rickhekman" rel="noopener noreferrer" target="_blank" aria-label="Rick Hekman on GitHub" class="github">
             <GitHubIcon />
           </a>
           <a href="https://www.linkedin.com/in/rickhekman/" rel="noopener noreferrer" target="_blank" aria-label="Rick Hekman on LinkedIn">

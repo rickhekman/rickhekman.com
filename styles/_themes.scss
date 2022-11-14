@@ -5,13 +5,15 @@ $themes: (
     'text-color': $color-text-dark,
     'link-color': $color-link-dark,
     'bg-color': $color-bg-dark,
-    'filter-color': $color-filter-dark
+    'filter-color': $color-filter-dark,
+    'filter-hover-color': $color-filter-hover-dark
   ),
   light: (
     'text-color': $color-text-light,
     'link-color': $color-link-light,
     'bg-color': $color-bg-light,
-    'filter-color': $color-filter-light
+    'filter-color': $color-filter-light,
+    'filter-hover-color': $color-filter-hover-light
   )
 );
 

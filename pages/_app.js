@@ -5,10 +5,10 @@ import '../styles/globals.scss';
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <ThemeProvider attribute="class" disableTransitionOnChange>
+    <ThemeProvider attribute="class" disableTransitionOnChange>
+      <Layout>
         <Component {...pageProps} />
-      </ThemeProvider>
-    </Layout>
+      </Layout>
+    </ThemeProvider>
   )
 }
