@@ -47,6 +47,22 @@ footer {
   }
 }
 
+.github {  
+  svg {
+    transition: filter .4s ease-in-out;
+
+    @include theme() {
+      filter: theme-get('filter-color');    
+    }
+
+    &:hover {
+      @include theme() { 
+        filter: theme-get('filter-hover-color');    
+      }
+    }   
+  }
+}
+
 * {
   box-sizing: border-box;
 }
