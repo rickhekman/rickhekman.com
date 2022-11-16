@@ -17,16 +17,22 @@ body {
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   line-height: $line-height--normal; 
 }
-
 
 a {
   color: inherit;
   text-decoration: none; 
 }
 
+/* 
+Theme color settings
+*/
 footer {
   p {
     a {
@@ -63,8 +69,8 @@ footer {
   }
 }
 
-* {
-  box-sizing: border-box;
+.ig-gallery {
+  display: flex;
 }
 
 /* Typography */
