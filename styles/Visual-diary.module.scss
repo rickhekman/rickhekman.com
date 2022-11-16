@@ -1,0 +1,33 @@
+@import '../styles/mixins';
+
+.container { 
+  max-width: 300px;
+  display: flex !important;
+  align-items: center;
+
+  > span {
+    position: unset !important;
+    
+  }
+
+  .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-content: center;
+  justify-content: center;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+  // grid-gap: 2em;
+  // grid-auto-rows: minmax(300px, auto);
+  // grid-auto-flow: dense;
+  // padding: 1px;
+}
