@@ -1,7 +1,8 @@
+import Image from "next/image";
 
- import Image from "next/image";
- 
- function VisualDiary({ feed }) {
+import styles from "../styles/Visual-diary.module.scss"
+
+function VisualDiary({ feed }) {
   console.log('FEED DATA is ARRAY?', Array.isArray(feed.data));
   const posts = feed.data;
   console.log("Posts", posts);
@@ -11,27 +12,20 @@
   return (
     
     <>
-      <h2>Visual diary</h2>
-      {/* <ul>
-        {posts && posts.map((post) => (
-          <li key={post.id}>{post}</li>
-        ))}
-      </ul> */}
-      
-      
     
-      <div className="ig-gallery">
+      <div className={styles.gallery}>
         {
           posts && 
           posts.filter(post => post.media_type === "IMAGE").map((post) => (            
-            <div key={post.id}>
-              <Image  
-              unoptimized  
-              src={post.media_url} 
-              alt={post.caption}                           
-              />            
-            </div>
-           
+            <div key={post.id} className={styles.container}>
+              <Image
+                unoptimized
+                src={post.media_url}
+                alt={post.caption}
+                className={styles.image}
+                layout="fill"                                
+              />       
+            </div>           
           ))
         }
       </div>
