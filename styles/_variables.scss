@@ -20,6 +20,7 @@ $color-filter-hover-dark: none;
 
 
 /* Typography */
+$font-size--x-small: clamp(.8em, 1vw, .95em);
 $font-size--small: clamp(1em, 1.5vw, 1.125em);
 $font-size--medium: clamp(1.125em, 2vw, 1.25em);
 $font-size--large: clamp(1.25em, 3vw, 1.5625em);
