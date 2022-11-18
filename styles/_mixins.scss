@@ -7,8 +7,8 @@
 1800px + : Big desktop
 */
 
-/* 
-$breakpoint arguments: 
+/*
+$breakpoint arguments:
 - mobile
 - tablet-port
 - tablet-land
@@ -26,6 +26,10 @@ $breakpoint arguments:
 
   @if $breakpoint == tablet-land {
     @media (min-width: 900px) and (max-width: 1200px) { @content };
+  }
+
+  @if $breakpoint == tablet {
+    @media (min-width: 1024px) { @content };
   }
 
   @if $breakpoint == desktop {
