@@ -4,6 +4,7 @@ $themes: (
   dark: (
     'text-color': $color-text-dark,
     'link-color': $color-link-dark,
+    'link-blue': $color-link-blue-dark,
     'bg-color': $color-bg-dark,
     'filter-color': $color-filter-dark,
     'filter-hover-color': $color-filter-hover-dark
@@ -11,6 +12,7 @@ $themes: (
   light: (
     'text-color': $color-text-light,
     'link-color': $color-link-light,
+    'link-blue': $color-link-blue-light,
     'bg-color': $color-bg-light,
     'filter-color': $color-filter-light,
     'filter-hover-color': $color-filter-hover-light
