@@ -5,16 +5,6 @@ module.exports = {
     includePaths: [path.join(__dirname, 'styles')],
     cssModules: true,
   },
-  images: {       
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: ['scontent-ams4-1.cdninstagram.com','scontent-ams2-1.cdninstagram.com'],
-        port: '',
-        pathname: '/v/**',    
-      },
-    ],
-  },
 }
 
 /** @type {import('next').NextConfig} */
