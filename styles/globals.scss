@@ -52,19 +52,29 @@ footer {
       @include theme() {
         color: theme-get('link-color');
       }
-
-      &:hover {
-        filter: saturate(6);
-      }
-    }
-  }
-
-  svg {
-    @include theme() {
-      filter: theme-get('filter-color');
     }
   }
 }
+
+// footer {
+//   p {
+//     a {
+//       @include theme() {
+//         color: theme-get('link-color');
+//       }
+
+//       &:hover {
+//         filter: saturate(6);
+//       }
+//     }
+//   }
+
+//   svg {
+//     @include theme() {
+//       filter: theme-get('filter-color');
+//     }
+//   }
+// }
 
 .github {
   svg {

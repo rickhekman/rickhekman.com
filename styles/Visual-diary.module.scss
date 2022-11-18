@@ -1,6 +1,5 @@
-// @import '../styles/themes';
+@import '../styles/themes';
 @import '../styles/variables';
-// @import '../styles/mixins';
 
 .container {
   max-width: 300px;
@@ -27,14 +26,13 @@
   align-content: center;
   justify-content: center;
 
+
+
   &__credits {
     padding-top: 2em;
 
     p {
       font-size: $font-size--x-small;
-      border-bottom: 1px solid #5f9ea0;
-      padding-bottom: 1em;
-
       // a {
       //   @include theme() {
       //     color: theme-get('link-color');
