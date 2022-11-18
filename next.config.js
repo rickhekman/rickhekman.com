@@ -3,17 +3,13 @@ const path = require('path')
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
+    prependData: `@import "variables.scss";`,
+    prependData: `@import "mixins.scss";`,
+    prependData: `@import "themes.scss";`,
     cssModules: true,
   },
-  images: {       
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: ['scontent-ams4-1.cdninstagram.com','scontent-ams2-1.cdninstagram.com'],
-        port: '',
-        pathname: '/v/**',    
-      },
-    ],
+  experimental: {
+    forceSwcTransforms: true,
   },
 }
 

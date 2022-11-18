@@ -1,29 +1,6 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import styles from "../styles/Visual-diary.module.scss"
-
-function VisualDiary({ feed }) {
-
-  const posts = feed.data;
-
-  return (
-    <>
-      <div className={styles.gallery}>
-        {
-          posts.map((post) => (
-           <Timeline key={post.id} feed={post} />
-          ))
-        }
-        <div className={styles.gallery__credits}>
-          <p>
-            Visit my <a href="https://www.instagram.com/rickhekman/" rel="noopener noreferrer" target="_blank">Instagram profile</a>  for more
-          </p>
-        </div>
-      </div>
-
-    </>
-  )
-}
 
 export async function getStaticProps() {
   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
@@ -51,14 +28,15 @@ export function Timeline(props) {
               src={media_url}
               type="video/mp4"
               controls
-              playsinline
+              playsInline
               controlsList="nodownload">
           </video>
         </div>
 
       )
       break;
-  case "CAROUSEL_ALBUM":
+
+    case "CAROUSEL_ALBUM":
       post = (
         <div className={styles.container}>
           <Image
@@ -72,7 +50,8 @@ export function Timeline(props) {
 
       );
       break;
-  default:
+
+    default:
       post = (
         <div className={styles.container}>
           <Image
@@ -84,8 +63,7 @@ export function Timeline(props) {
           />
         </div>
       );
-  }
-
+    }
   return (
     <>
       {post}
@@ -93,4 +71,25 @@ export function Timeline(props) {
   )
 }
 
-export default VisualDiary;
+export default function VisualDiary({ feed }) {
+
+  const posts = feed.data;
+
+  return (
+    <>
+      <div className={styles.gallery}>
+        {
+          posts.map((post) => (
+           <Timeline key={post.id} feed={post} />
+          ))
+        }
+      </div>
+      <div className={styles.gallery__credits}>
+        <p>
+          Visit my <a href="https://www.instagram.com/rickhekman/" rel="noopener noreferrer" target="_blank">Instagram profile</a> for more
+        </p>
+      </div>
+
+    </>
+  )
+}
