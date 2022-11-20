@@ -1,4 +1,18 @@
-@import './variables';
+/* Light Theme Colors */
+$color-bg-light: #fefefa;
+$color-text-light: #001329;
+$color-link-light: #003CC1;
+$color-link-blue-light: #0000ff;
+$color-filter-light: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(6172%) hue-rotate(246deg) brightness(113%) contrast(147%);
+$color-filter-hover-light: brightness(0) saturate(100%);
+
+/* Dark Theme Colors */
+$color-bg-dark: #001329;
+$color-text-dark: #fefefa;
+$color-link-dark: #39ff14;
+$color-link-blue-dark: #71BBFA;
+$color-filter-dark: brightness(0) saturate(100%) invert(71%) sepia(4%) saturate(6416%) hue-rotate(179deg) brightness(100%) contrast(97%);
+$color-filter-hover-dark: none;
 
 $themes: (
   dark: (
@@ -21,12 +35,40 @@ $themes: (
 
 @mixin theme() {
   @each $theme, $map in $themes {
-    $theme-map: $map !global;
-    .#{$theme} & {
-      @content;
-    }
+      :global(.#{$theme}) & {
+          $theme-map: () !global;
+          @each $key, $submap in $map {
+              $value: map-get(map-get($themes, $theme), "#{$key}");
+              $theme-map: map-merge(
+                  $theme-map,
+                  (
+                      $key: $value,
+                  )
+              ) !global;
+          }
+          @content;
+          $theme-map: null !global;
+      }
   }
-  $theme-map: null !global;
+}
+
+@mixin globaltheme() {
+  @each $theme, $map in $themes {
+      .#{$theme} & {
+          $theme-map: () !global;
+          @each $key, $submap in $map {
+              $value: map-get(map-get($themes, $theme), "#{$key}");
+              $theme-map: map-merge(
+                  $theme-map,
+                  (
+                      $key: $value,
+                  )
+              ) !global;
+          }
+          @content;
+          $theme-map: null !global;
+      }
+  }
 }
 
 @function theme-get($key) {

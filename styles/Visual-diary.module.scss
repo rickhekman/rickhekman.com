@@ -14,15 +14,15 @@
 
     p {
       font-size: $font-size--medium;
-      // a {
-      //   @include theme() {
-      //     color: theme-get('link-color');
-      //   }
+      a {
+        @include theme() {
+          color: theme-get('link-blue');
+        }
 
-      //   &:hover {
-      //     filter: saturate(6);
-      //   }
-      // }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

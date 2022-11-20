@@ -2,27 +2,8 @@
 $primary-color: #64ff00;
 $secondary-color: #001329;
 
-/* Light Theme Colors */
-$color-bg-light: #fefefa;
-$color-text-light: #001329;
-$color-link-light: #003CC1;
-$color-link-blue-light: #0000ff;
-$color-filter-light: brightness(0) saturate(100%) invert(15%) sepia(88%) saturate(2908%) hue-rotate(217deg) brightness(105%) contrast(111%);
-$color-filter-hover-light: brightness(0) saturate(100%);
-
-
-/* Dark Theme Colors */
-$color-bg-dark: #001329;
-$color-text-dark: #fefefa;
-$color-link-dark: #39ff14;
-$color-link-blue-dark: #71BBFA;
-$color-filter-dark: brightness(0) saturate(100%) invert(80%) sepia(79%) saturate(2486%) hue-rotate(51deg) brightness(94%) contrast(123%);
-$color-filter-hover-dark: none;
-
-
-
 /* Typography */
-$font-size--x-small: clamp(.8em, 1vw, .95em);
+$font-size--x-small: clamp(.875em, 1vw, .9375em);
 $font-size--small: clamp(1em, 1.5vw, 1.125em);
 $font-size--medium: clamp(1.125em, 2vw, 1.25em);
 $font-size--large: clamp(1.25em, 3vw, 1.5625em);
@@ -31,8 +12,8 @@ $font-size--huge: clamp(2em, 5vw, 2.5em);
 $font-size--gigantic: clamp(2.5em, 6vw, 3em);
 $font-size--colossal: clamp(3em, 7vw, 3.75em);
 
-
 $line-height--tiny: 1;
 $line-height--small: 1.15;
 $line-height--medium: 1.2;
 $line-height--normal: 1.4;
+$line-height--large: 1.6;
