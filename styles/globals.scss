@@ -12,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @include theme() {
+  @include globaltheme() {
     color: theme-get('text-color');
     background: theme-get('bg-color');
   }
@@ -35,53 +35,53 @@ a {
 Theme color settings
 */
 
-main {
-  a {
-    @include theme() {
-      color: theme-get('link-blue');
-    }
+// main {
+//   a {
+//     @include theme() {
+//       color: theme-get('link-blue');
+//     }
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//   }
+// }
 
-footer {
-  p {
-    a {
-      @include theme() {
-        color: theme-get('link-color');
-      }
+// footer {
+//   p {
+//     a {
+//       @include theme() {
+//         color: theme-get('link-color');
+//       }
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+//       &:hover {
+//         text-decoration: underline;
+//       }
+//     }
+//   }
 
-  svg {
-    @include theme() {
-      filter: theme-get('filter-color');
-    }
-  }
-}
+//   svg {
+//     @include theme() {
+//       filter: theme-get('filter-color');
+//     }
+//   }
+// }
 
-.github {
-  svg {
-    transition: filter .4s ease-in-out;
+// .github {
+//   svg {
+//     transition: filter .4s ease-in-out;
 
-    @include theme() {
-      filter: theme-get('filter-color');
-    }
+//     @include theme() {
+//       filter: theme-get('filter-color');
+//     }
 
-    &:hover {
-      @include theme() {
-        filter: theme-get('filter-hover-color');
-      }
-    }
-  }
-}
+//     &:hover {
+//       @include theme() {
+//         filter: theme-get('filter-hover-color');
+//       }
+//     }
+//   }
+// }
 
 /* Typography */
 h1 {
