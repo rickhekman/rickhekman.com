@@ -1,32 +1,48 @@
 /* Light Theme Colors */
 $color-bg-light: #fefefa;
 $color-text-light: #001329;
-$color-link-light: #003CC1;
+$color-link-green-light: #00663C;
 $color-link-blue-light: #0000ff;
+$color-link-red-light: #a40000;
+$color-link-pink-light: #A3008C;
+$color-link-purple-light: #69359c;
+$color-link-yellow-light: #6E5502;
 $color-filter-light: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(6172%) hue-rotate(246deg) brightness(113%) contrast(147%);
 $color-filter-hover-light: brightness(0) saturate(100%);
 
 /* Dark Theme Colors */
 $color-bg-dark: #001329;
 $color-text-dark: #fefefa;
-$color-link-dark: #39ff14;
+$color-link-green-dark: #39ff14;
 $color-link-blue-dark: #71BBFA;
+$color-link-red-dark: #FF7761;
+$color-link-pink-dark: #FFCCCB;
+$color-link-purple-dark: #acace6;
+$color-link-yellow-dark: #ffc40c;
 $color-filter-dark: brightness(0) saturate(100%) invert(71%) sepia(4%) saturate(6416%) hue-rotate(179deg) brightness(100%) contrast(97%);
 $color-filter-hover-dark: none;
 
 $themes: (
   dark: (
     'text-color': $color-text-dark,
-    'link-color': $color-link-dark,
+    'link-green': $color-link-green-dark,
     'link-blue': $color-link-blue-dark,
+    'link-red': $color-link-red-dark,
+    'link-yellow': $color-link-yellow-dark,
+    'link-pink': $color-link-pink-dark,
+    'link-purple': $color-link-purple-dark,
     'bg-color': $color-bg-dark,
     'filter-color': $color-filter-dark,
     'filter-hover-color': $color-filter-hover-dark
   ),
   light: (
     'text-color': $color-text-light,
-    'link-color': $color-link-light,
+    'link-green': $color-link-green-light,
     'link-blue': $color-link-blue-light,
+    'link-red': $color-link-red-light,
+    'link-yellow': $color-link-yellow-light,
+    'link-pink': $color-link-pink-light,
+    'link-purple': $color-link-purple-light,
     'bg-color': $color-bg-light,
     'filter-color': $color-filter-light,
     'filter-hover-color': $color-filter-hover-light

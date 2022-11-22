@@ -10,11 +10,11 @@ export default function Footer() {
       <footer className={styles.footer}>
         <div>
           <p>
-            Let&#39;s stay in touch: <a href="mailto:info@rickhekman.com">Send me an email</a> or <a href="tel:+31648700448">call me at +31 648 700 448</a> 
+            Let&#39;s stay in touch: <a href="mailto:info@rickhekman.com">Send me an email</a> or <a href="tel:+31648700448">call me at +31 648 700 448</a>
           </p>
         </div>
         <nav className={styles.footer__icons}>
-          <a href="https://github.com/rickhekman" rel="noopener noreferrer" target="_blank" aria-label="Rick Hekman on GitHub" className="github">
+          <a href="https://github.com/rickhekman" rel="noopener noreferrer" target="_blank" aria-label="Rick Hekman on GitHub" className={styles.github}>
             <GitHubIcon />
           </a>
           <a href="https://www.linkedin.com/in/rickhekman/" rel="noopener noreferrer" target="_blank" aria-label="Rick Hekman on LinkedIn">

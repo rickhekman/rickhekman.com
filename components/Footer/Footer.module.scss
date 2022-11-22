@@ -21,6 +21,8 @@
   }
 
   a {
+    text-decoration: none;
+
     @include theme() {
       color: theme-get('link-blue');
     }
@@ -30,6 +32,23 @@
     }
   }
 
+  .github {
+    svg {
+      transition: filter .4s ease-in-out;
+
+      @include theme() {
+        filter: theme-get('filter-color');
+      }
+
+      &:hover {
+        @include theme() {
+          filter: theme-get('filter-hover-color');
+        }
+      }
+    }
+  }
+
+
   &__icons {
     display: flex;
     gap: 1.5em;
@@ -38,7 +57,6 @@
     a {
       width: 1.5em;
       height: auto;
-
     }
 
     svg {
@@ -46,10 +64,9 @@
       height: 100%;
       transition: filter .4s ease-in-out;
 
-        @include theme() {
-          filter: theme-get('filter-color');
-
-        }
+      @include theme() {
+        filter: theme-get('filter-color');
+      }
 
       &:hover {
         filter: none;
@@ -57,6 +74,7 @@
     }
   }
 }
+
 
 @media (prefers-color-scheme: dark) {
   .footer {
