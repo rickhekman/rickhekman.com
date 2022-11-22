@@ -14,13 +14,14 @@
 
     p {
       font-size: $font-size--medium;
+
       a {
         @include theme() {
-          color: theme-get('link-blue');
+          color: theme-get('link-green');
         }
 
         &:hover {
-          text-decoration: underline;
+          text-decoration: none;
         }
       }
     }
