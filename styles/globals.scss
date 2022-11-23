@@ -13,8 +13,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   @include globaltheme() {
-    color: theme-get('text-color');
-    background: theme-get('bg-color');
+    color: get('text-color');
+    background: get('bg-color');
   }
 }
 
