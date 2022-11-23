@@ -24,7 +24,7 @@
     text-decoration: none;
 
     @include theme() {
-      color: theme-get('link-blue');
+      color: get('link-blue');
     }
 
     &:hover {
@@ -37,12 +37,12 @@
       transition: filter .4s ease-in-out;
 
       @include theme() {
-        filter: theme-get('filter-color');
+        filter: get('filter-color');
       }
 
       &:hover {
         @include theme() {
-          filter: theme-get('filter-hover-color');
+          filter: get('filter-hover-color');
         }
       }
     }
@@ -65,7 +65,7 @@
       transition: filter .4s ease-in-out;
 
       @include theme() {
-        filter: theme-get('filter-color');
+        filter: get('filter-color');
       }
 
       &:hover {
