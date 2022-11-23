@@ -87,6 +87,6 @@ $themes: (
   }
 }
 
-@function theme-get($key) {
+@function get($key) {
   @return map-get($theme-map, $key);
 }
