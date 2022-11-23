@@ -32,9 +32,11 @@
     }
   }
 
-  .github {
+  .github,
+  .phone,
+  .mail {
     svg {
-      transition: filter .4s ease-in-out;
+      transition: all .4s ease-in-out;
 
       @include theme() {
         filter: get('filter-color');
@@ -49,10 +51,27 @@
   }
 
 
+
+ .mail,
+ .phone {
+  svg:last-child {
+    display: none;
+  }
+
+  &:hover {
+    svg:first-child {
+      display: none;
+    }
+
+    svg:last-child {
+      display: block;
+    }
+  }
+ }
+
   &__icons {
     display: flex;
     gap: 1.5em;
-    margin-top: .5em;
 
     a {
       width: 1.5em;
@@ -75,12 +94,29 @@
   }
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  @include respond(mobile) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.text {
+
+  p {
+    margin-bottom: 0;
+    @include respond(mobile) {
+      margin-bottom: 1.5vmin;
+    }
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   .footer {
     border-color: #222;
   }
 }
-
-
-
