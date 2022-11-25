@@ -16,11 +16,11 @@ export async function getStaticProps() {
 
 export function GalleryItem(props) {
   const { caption, media_type, media_url} = props.feed;
-  let post;
+  let media;
 
   switch (media_type) {
     case "VIDEO":
-      post = (
+      media = (
         <div className={styles.video}>
           <video
               width={300}
@@ -36,7 +36,7 @@ export function GalleryItem(props) {
       break;
 
     case "CAROUSEL_ALBUM":
-      post = (
+      media = (
         <div className={styles.container}>
           <Image
             unoptimized
@@ -50,7 +50,7 @@ export function GalleryItem(props) {
       break;
 
     default:
-      post = (
+      media = (
         <div className={styles.container}>
           <Image
             unoptimized
@@ -63,14 +63,11 @@ export function GalleryItem(props) {
       );
     }
   return (
-    <>
-      {post}
-    </>
+    media
   )
 }
 
 export default function VisualDiary({ feed }) {
-
   const posts = feed.data;
 
   return (
