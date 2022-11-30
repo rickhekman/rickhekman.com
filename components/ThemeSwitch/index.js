@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
+import BulbDark from '../SVG/BulbDark';
+import BulbLight from '../SVG/BulbLight';
+
 import styles from './ThemeSwitch.module.scss';
 
 export default function ThemeSwitch() {
@@ -20,14 +23,14 @@ export default function ThemeSwitch() {
     const currentTheme = theme === "system" ? systemTheme : theme;
     if (currentTheme === "dark") {
       return (
-        <button onClick={() => setTheme('light')}>
-          Turn on light
+        <button onClick={() => setTheme('light')} className={styles.button} type="button" aria-describedby="Light bulb turn on light theme">
+          <BulbLight />
         </button>
       )
     }
     return (
-      <button onClick={() => setTheme('dark')}>
-        Turn off light
+      <button onClick={() => setTheme('dark')} className={styles.button} type="button" aria-describedby="Dark bulb turn on dark theme">
+        <BulbDark />
       </button>
     )
   }
