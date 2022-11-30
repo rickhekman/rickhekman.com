@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ThemeSwitch from '../ThemeSwitch';
 
 import styles from './Nav.module.scss';
 
@@ -15,8 +16,9 @@ export default function Nav() {
           </li>
           <li>
             <Link href="/visual-diary">Visual diary</Link>
-          </li>          
+          </li>
         </ul>
+        <ThemeSwitch/>
       </nav>
     </>
   )
