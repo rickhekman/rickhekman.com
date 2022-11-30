@@ -1,6 +1,6 @@
 import Image from "next/legacy/image";
 
-import styles from "../styles/Visual-diary.module.scss"
+import styles from "./Visual-diary.module.scss"
 
 export async function getStaticProps() {
   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
@@ -9,18 +9,18 @@ export async function getStaticProps() {
 
   return {
     props: {
-      feed,
-    },
+      feed
+    }
   }
 }
 
-export function Timeline(props) {
+export function GalleryItem(props) {
   const { caption, media_type, media_url} = props.feed;
-  let post;
+  let media;
 
   switch (media_type) {
     case "VIDEO":
-      post = (
+      media = (
         <div className={styles.video}>
           <video
               width={300}
@@ -32,12 +32,11 @@ export function Timeline(props) {
               controlsList="nodownload">
           </video>
         </div>
-
       )
       break;
 
     case "CAROUSEL_ALBUM":
-      post = (
+      media = (
         <div className={styles.container}>
           <Image
             unoptimized
@@ -47,12 +46,11 @@ export function Timeline(props) {
             layout="fill"
           />
         </div>
-
       );
       break;
 
     default:
-      post = (
+      media = (
         <div className={styles.container}>
           <Image
             unoptimized
@@ -65,31 +63,28 @@ export function Timeline(props) {
       );
     }
   return (
-    <>
-      {post}
-    </>
+    media
   )
 }
 
 export default function VisualDiary({ feed }) {
-
   const posts = feed.data;
 
   return (
     <>
-      <div className={styles.gallery}>
-        {
-          posts.map((post) => (
-           <Timeline key={post.id} feed={post} />
+      <ul className={styles.gallery}>
+        {posts.map((post) => (
+          <li key={post.id} className={styles.item}>
+            <GalleryItem feed={post}/>
+          </li>
           ))
-        }
-      </div>
+        };
+      </ul>
       <div className={styles.gallery__credits}>
         <p>
           Visit my <a href="https://www.instagram.com/rickhekman/" rel="noopener noreferrer" target="_blank">Instagram profile</a> for more
         </p>
       </div>
-
     </>
   )
 }

@@ -1,6 +1,6 @@
-@import '../styles/themes';
-@import '../styles/variables';
-@import '../styles/mixins';
+@import '../../styles/themes';
+@import '../../styles/variables';
+@import '../../styles/mixins';
 
 .gallery {
   display: flex;
@@ -8,6 +8,8 @@
   align-content: center;
   justify-content: center;
   gap: 1em;
+  list-style: none;
+  padding-left: 0;
 
   &__credits {
     padding-top: 4em;
@@ -91,4 +93,9 @@
       }
     }
   }
+}
+
+.item {
+  display: flex;
+  align-items: center;
 }

@@ -1,9 +1,15 @@
 @import '../../styles/variables';
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .menu {
   list-style: none;
   display: flex;
   gap: 5vmin;
+  margin-top: 1.5em;
   padding-left: 0;
 
   a {
