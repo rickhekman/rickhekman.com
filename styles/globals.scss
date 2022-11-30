@@ -31,6 +31,10 @@ a {
   text-decoration: underline;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Typography */
 h1 {
   font-size: $font-size--gigantic;

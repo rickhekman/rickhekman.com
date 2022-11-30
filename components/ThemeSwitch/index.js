@@ -5,7 +5,7 @@ import styles from './ThemeSwitch.module.scss';
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { systemTheme, theme, setTheme } = useTheme()
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
@@ -16,12 +16,26 @@ export default function ThemeSwitch() {
     return null
   }
 
+  const themeToggle = () => {
+    const currentTheme = theme === "system" ? systemTheme : theme;
+    if (currentTheme === "dark") {
+      return (
+        <button onClick={() => setTheme('light')}>
+          Turn on light
+        </button>
+      )
+    }
+    return (
+      <button onClick={() => setTheme('dark')}>
+        Turn off light
+      </button>
+    )
+  }
+
   return (
     <>
       <div className={styles.switch}>
-          The current theme is: {theme}
-        <button onClick={() => setTheme('light')}>Light Mode</button>
-        <button onClick={() => setTheme('dark')}>Dark Mode</button>
+         {themeToggle()}
       </div>
     </>
   )
