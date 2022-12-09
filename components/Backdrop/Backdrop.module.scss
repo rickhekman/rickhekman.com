@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+@import '../../styles/themes';
+
+.backdrop {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 100;
+  @include theme() {
+    background: rgba(get('text-color'), .4);
+  }
+}
