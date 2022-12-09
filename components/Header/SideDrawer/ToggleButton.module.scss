@@ -1,0 +1,50 @@
+@import '../../../styles/variables';
+@import '../../../styles/themes';
+
+.button {
+  height: 3.5em;
+  width: 3.5em;
+  position: relative;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  z-index: 2000;
+
+  @include theme() {
+    background-color: get('link-blue');
+  }
+}
+
+.line {
+  position: relative;
+  margin-bottom: .2em;
+
+  &,
+  &::before,
+  &::after {
+    width: 2em;
+    height: 3px;
+    display: inline-block;
+
+    @include theme() {
+      background-color: get('bg-color');
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+
+  &::before {
+    top: -.6em;
+  }
+
+  &::after {
+    top: .6em;
+  }
+}
