@@ -46,7 +46,7 @@ export function GalleryItem(props) {
             layout="fill"
           />
         </div>
-      );
+      )
       break;
 
     default:
@@ -60,7 +60,7 @@ export function GalleryItem(props) {
             layout="fill"
           />
         </div>
-      );
+      )
     }
   return (
     media
@@ -78,7 +78,7 @@ export default function VisualDiary({ feed }) {
             <GalleryItem feed={post}/>
           </li>
           ))
-        };
+        }
       </ul>
       <div className={styles.gallery__credits}>
         <p>
