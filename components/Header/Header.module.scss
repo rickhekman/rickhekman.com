@@ -6,3 +6,23 @@
   justify-content: space-between;
   margin-top: 1.5em;
 }
+
+.open {
+   button:first-of-type {
+    position: fixed;
+
+    span {
+      background-color: transparent !important;
+
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

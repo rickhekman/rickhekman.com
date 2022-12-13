@@ -14,6 +14,7 @@ export default function Header() {
   const openHandler = () => {
     if (!SideDrawerOpen) {
       setSideDrawerOpen(true);
+
     } else {
       setSideDrawerOpen(false);
     }
@@ -36,7 +37,7 @@ export default function Header() {
   return (
     <>
       <header className={styles.header}>
-        <div className={styles.menu}>
+        <div className={SideDrawerOpen ? `${styles.open}` : ``}>
           <ToggleButton click={openHandler}/>
           <SideDrawer show={SideDrawerOpen} click={closeHandler}/>
           {backdrop}
