@@ -1,10 +1,11 @@
 @import '../../../styles/variables';
+@import '../../../styles/mixins';
 @import '../../../styles/themes';
 
 .button {
-  height: 3.5em;
-  width: 3.5em;
-  position: relative;
+  height: 3em;
+  width: 3em;
+  position: absolute;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -13,6 +14,11 @@
 
   @include theme() {
     background-color: get('link-blue');
+  }
+
+  @include respond(mobile) {
+    height: 3.5em;
+    width: 3.5em;
   }
 }
 
@@ -23,12 +29,16 @@
   &,
   &::before,
   &::after {
-    width: 2em;
+    width: 1.65em;
     height: 3px;
     display: inline-block;
 
     @include theme() {
       background-color: get('bg-color');
+    }
+
+    @include respond(mobile) {
+      width: 2em;
     }
   }
 
@@ -41,10 +51,18 @@
   }
 
   &::before {
-    top: -.6em;
+    top: -.5em;
+
+    @include respond(mobile) {
+      top: -.6em;
+    }
   }
 
   &::after {
-    top: .6em;
+    top: .5em;
+
+    @include respond(mobile) {
+      top: .6em;
+    }
   }
 }
