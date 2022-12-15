@@ -21,13 +21,13 @@ export default function SideDrawer(props) {
         <nav className={styles.nav}>
           <ul className={styles.menu}>
             <li className={styles.item} onClick={props.click} >
-              <Link href="/" tabindex={tabindex}>Home</Link>
+              <Link href="/" tabIndex={tabindex}>Home</Link>
             </li>
             <li className={styles.item} onClick={props.click}>
-              <Link href="/projects" tabindex={tabindex}>Projects</Link>
+              <Link href="/projects" tabIndex={tabindex}>Projects</Link>
             </li>
             <li className={styles.item} onClick={props.click}>
-              <Link href="/visual-diary" tabindex={tabindex}>Visual diary</Link>
+              <Link href="/visual-diary" tabIndex={tabindex}>Visual diary</Link>
             </li>
           </ul>
         </nav>
