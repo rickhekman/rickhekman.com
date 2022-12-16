@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import LocaleSwitcher from '../../LocaleSwitcher';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 import { en, es, nl } from './translations';
 
@@ -11,6 +11,14 @@ export default function SideDrawer(props) {
 
   const router = useRouter();
   const { locale } = router;
+  let t = locale;
+  if (t === 'en') {
+    t = en
+  } else if (t === 'es') {
+    t = es
+  } else {
+    t = nl
+  }
 
   let drawerClasses = styles.sidedrawer;
   let tabindex = -1;
@@ -20,14 +28,6 @@ export default function SideDrawer(props) {
     tabindex = 0;
   }
 
-  let t = locale;
-  if (t === 'en') {
-    t = en
-  } else if (t === 'es') {
-    t = es
-  } else {
-    t = nl
-  }
 
   return (
     <>
