@@ -1,3 +1,7 @@
+import { useRouter } from 'next/router';
+
+import { en, es, nl } from './translations';
+
 import PhoneIcon from '../SVG/Phone';
 import PhoneRingIcon from '../SVG/PhoneRing';
 import MailCloseIcon from '../SVG/MailClose';
@@ -9,13 +13,26 @@ import InstagramIcon from '../SVG/InstagramIcon';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
+
+  const router = useRouter();
+  const { locale } = router;
+
+  let t = locale;
+  if (t === 'en') {
+    t = en
+  } else if (t === 'es') {
+    t = es
+  } else {
+    t = nl
+  }
+
   return (
     <>
       <footer className={styles.footer}>
         <div className={styles.contact}>
           <div className={styles.text}>
             <p>
-              Let&#39;s stay in touch:
+              {t.description}:
             </p>
           </div>
           <div className={styles.footer__icons}>
