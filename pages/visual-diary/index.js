@@ -1,4 +1,7 @@
 import Image from "next/legacy/image";
+import { useRouter } from 'next/router';
+
+import { en, es, nl } from './translations';
 
 import styles from "./Visual-diary.module.scss"
 
@@ -70,6 +73,17 @@ export function GalleryItem(props) {
 export default function VisualDiary({ feed }) {
   const posts = feed.data;
 
+  const router = useRouter();
+  const { locale } = router;
+  let t = locale;
+  if (t === 'en') {
+    t = en
+  } else if (t === 'es') {
+    t = es
+  } else {
+    t = nl
+  }
+
   return (
     <>
       <ul className={styles.gallery}>
@@ -82,7 +96,7 @@ export default function VisualDiary({ feed }) {
       </ul>
       <div className={styles.gallery__credits}>
         <p>
-          Visit my <a href="https://www.instagram.com/rickhekman/" rel="noopener noreferrer" target="_blank">Instagram profile</a> for more
+          {t.visit} <a href="https://www.instagram.com/rickhekman/" rel="noopener noreferrer" target="_blank">{t.insta}</a> {t.more}
         </p>
       </div>
     </>
