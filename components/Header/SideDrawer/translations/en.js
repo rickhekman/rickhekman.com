@@ -1,7 +1,9 @@
-const en = {
-  projects: "Projects",
-  visual: "Visual diary",
-  lang: "Language"
-}
-
-export default en;
+export default function en() {
+  return (
+    {
+      projects: "Projects",
+      visual: "Visual diary",
+      lang: "Language"
+    }
+  )
+};

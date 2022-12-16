@@ -1,7 +1,9 @@
-const es = {
-  visit: "Visita mi",
-  insta: "perfil de Instagram",
-  more: "para más."
-}
-
-export default es;
+export default function es() {
+  return (
+    {
+      visit: "Visita mi",
+      insta: "perfil de Instagram",
+      more: "para más."
+    }
+  )
+};

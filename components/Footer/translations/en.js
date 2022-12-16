@@ -1,5 +1,7 @@
-const en = {
-  description: "Let's stay in touch",
-}
-
-export default en;
+export default function en() {
+  return (
+    {
+      description: "Let's stay in touch",
+    }
+  )
+};

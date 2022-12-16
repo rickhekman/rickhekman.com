@@ -15,11 +15,11 @@ export default function SideDrawer(props) {
   const { locale } = router;
   let t = locale;
   if (t === 'en') {
-    t = en;
+    t = en();
   } else if (t === 'es') {
-    t = es;
+    t = es();
   } else {
-    t = nl;
+    t = nl();
   };
 
   let drawerClasses = styles.sidedrawer;

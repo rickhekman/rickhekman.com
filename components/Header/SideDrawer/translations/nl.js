@@ -1,7 +1,9 @@
-const nl = {
-  projects: "Projecten",
-  visual: "Visueel dagboek",
-  lang: "Taal"
-}
-
-export default nl;
+export default function nl() {
+  return (
+    {
+      projects: "Projecten",
+      visual: "Visueel dagboek",
+      lang: "Taal"
+    }
+  )
+};

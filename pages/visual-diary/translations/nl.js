@@ -1,7 +1,9 @@
-const nl = {
-  visit: "Bezoek mijn",
-  insta: "Instagram profiel",
-  more: "voor meer."
-}
-
-export default nl;
+export default function nl() {
+  return (
+    {
+      visit: "Bezoek mijn",
+      insta: "Instagram profiel",
+      more: "voor meer."
+    }
+  )
+};
