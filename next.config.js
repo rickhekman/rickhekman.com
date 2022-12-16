@@ -17,10 +17,13 @@ module.exports = {
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  i18n: {
-    locales: ["en", "nl"],
-    defaultLocale: "en",
-  },
 }
 
 module.exports = nextConfig
+
+module.exports = {
+  i18n: {
+    locales: ['en', 'es', 'nl'],
+    defaultLocale: 'en',
+  },
+}

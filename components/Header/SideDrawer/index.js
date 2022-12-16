@@ -1,9 +1,14 @@
 import Link from 'next/link';
+import LocaleSwitcher from '../../LocaleSwitcher';
+import { useRouter } from 'next/router'
 
 import styles from './SideDrawer.module.scss';
 
 
 export default function SideDrawer(props) {
+
+  const router = useRouter();
+  const { locale } = router;
 
   let drawerClasses = styles.sidedrawer;
   if (props.show) {
@@ -14,6 +19,7 @@ export default function SideDrawer(props) {
   if (props.show) {
     tabindex = 0;
   }
+
 
   return (
     <>
@@ -30,6 +36,10 @@ export default function SideDrawer(props) {
               <Link href="/visual-diary" tabIndex={tabindex}>Visual diary</Link>
             </li>
           </ul>
+          <div className={styles.locale}>
+            <p className={styles.locale__lang}>Taal:  {locale}</p>
+              <LocaleSwitcher />
+          </div>
         </nav>
       </div>
     </>

@@ -69,9 +69,59 @@
       @include theme() {
         color: get('text-color');
       }
+
       &::before {
         transform-origin: left;
         transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.locale {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  &__lang {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: $font-size--x-large;
+    margin-bottom: 0;
+
+    @include theme() {
+      color: get('text-color');
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1.25em;
+    list-style: none;
+    margin-top: 0;
+    padding-left: 0;
+
+    a {
+      font-size: $font-size--x-large;
+
+      @include theme() {
+        color: get('link-blue');
+      }
+
+      &:hover {
+        @include theme() {
+          color: get('text-color');
+          text-decoration: none;
+        }
       }
     }
   }
