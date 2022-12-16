@@ -1,17 +1,23 @@
-export const en = {
-  projects: "Projects",
-  visual: "Visual diary",
-  lang: "Language"
+export function en() {
+  return {
+    projects: "Projects",
+    visual: "Visual diary",
+    lang: "Language"
+  }
 }
 
-export const es = {
-  projects: "Proyectos",
-  visual: "Diario visual",
-  lang: "Idioma"
+export function es() {
+  return {
+    projects: "Proyectos",
+    visual: "Diario visual",
+    lang: "Idioma"
+  }
 }
 
-export const nl = {
-  projects: "Projecten",
-  visual: "Visueel dagboek",
-  lang: "Taal"
+export function nl() {
+  return {
+    projects: "Projecten",
+    visual: "Visueel dagboek",
+    lang: "Taal"
+  }
 }
