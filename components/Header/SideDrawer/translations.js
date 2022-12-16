@@ -1,4 +1,4 @@
-export function en() {
+export default function en() {
   return {
     projects: "Projects",
     visual: "Visual diary",
