@@ -1,11 +1,17 @@
-export const en = {
+export function en() {
+  return {
   description: "Let's stay in touch",
+  }
 }
 
-export const es = {
-  description: "Mantengámonos en contacto",
+export function es() {
+  return {
+    description: "Mantengámonos en contacto",
+  }
 }
 
-export const nl = {
-  description: "Laten we in contact blijven",
+export function nl() {
+  return {
+    description: "Laten we in contact blijven",
+  }
 }

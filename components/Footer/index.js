@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 
-import { en, es, nl } from './translations';
+import  {en, es, nl } from './translations';
 
 import PhoneIcon from '../SVG/Phone';
 import PhoneRingIcon from '../SVG/PhoneRing';
@@ -19,12 +19,12 @@ export default function Footer() {
 
   let t = locale;
   if (t === 'en') {
-    t = en
+    t = en();
   } else if (t === 'es') {
-    t = es
+    t = es();
   } else {
-    t = nl
-  }
+    t = nl();
+  };
 
   return (
     <>
