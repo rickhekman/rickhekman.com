@@ -1,7 +1,9 @@
 import Image from "next/legacy/image";
 import { useRouter } from 'next/router';
 
-import { en, es, nl } from './translations';
+import en from './translations/en';
+import es from './translations/es';
+import nl from './translations/nl';
 
 import styles from "./Visual-diary.module.scss"
 
@@ -77,11 +79,11 @@ export default function VisualDiary({ feed }) {
   const { locale } = router;
   let t = locale;
   if (t === 'en') {
-    t = en();
+    t = en;
   } else if (t === 'es') {
-    t = es();
+    t = es;
   } else {
-    t = nl();
+    t = nl;
   };
 
   return (
