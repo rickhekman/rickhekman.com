@@ -1,9 +1,6 @@
 import Image from "next/legacy/image";
 import { useRouter } from 'next/router';
-
-import en from './translations/en';
-import es from './translations/es';
-import nl from './translations/nl';
+import useTranslation from "next-translate/useTranslation";
 
 import styles from "./Visual-diary.module.scss"
 
@@ -75,16 +72,7 @@ export function GalleryItem(props) {
 export default function VisualDiary({ feed }) {
   const posts = feed.data;
 
-  const router = useRouter();
-  const { locale } = router;
-  let t = locale;
-  if (t === 'en') {
-    t = en;
-  } else if (t === 'es') {
-    t = es;
-  } else {
-    t = nl;
-  };
+  let { t } = useTranslation();
 
   return (
     <>
@@ -98,7 +86,7 @@ export default function VisualDiary({ feed }) {
       </ul>
       <div className={styles.gallery__credits}>
         <p>
-          {t.visit} <a href="https://www.instagram.com/rickhekman/" rel="noopener noreferrer" target="_blank">{t.insta}</a> {t.more}
+          {t("diary:visit")} <a href="https://www.instagram.com/rickhekman/" rel="noopener noreferrer" target="_blank">{t("diary:insta")}</a> {t("diary:more")}
         </p>
       </div>
     </>
