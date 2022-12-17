@@ -1,8 +1,4 @@
-import { useRouter } from 'next/router';
-
-import en from './translations/en';
-import es from './translations/es';
-import nl from './translations/nl';
+import useTranslation from 'next-translate/useTranslation';
 
 import PhoneIcon from '../SVG/Phone';
 import PhoneRingIcon from '../SVG/PhoneRing';
@@ -12,21 +8,13 @@ import GitHubIcon from '../SVG/GitHubIcon';
 import LinkedInIcon from '../SVG/LinkedInIcon';
 import InstagramIcon from '../SVG/InstagramIcon';
 
+
+
 import styles from './Footer.module.scss';
 
 export default function Footer() {
 
-  const router = useRouter();
-  const { locale } = router;
-
-  let t = locale;
-  if (t === 'en') {
-    t = en();
-  } else if (t === 'es') {
-    t = es();
-  } else {
-    t = nl();
-  };
+  let { t } = useTranslation();
 
   return (
     <>
@@ -34,7 +22,7 @@ export default function Footer() {
         <div className={styles.contact}>
           <div className={styles.text}>
             <p>
-              {t.description}:
+              {t('footer:description')}:
             </p>
           </div>
           <div className={styles.footer__icons}>

@@ -1,26 +1,17 @@
 import Link from 'next/link';
-import LocaleSwitcher from '../../LocaleSwitcher';
 import { useRouter } from 'next/router';
+import useTranslation from 'next-translate/useTranslation';
 
-import en from './translations/en';
-import es from './translations/es';
-import nl from './translations/nl';
+import LocaleSwitcher from '../../LocaleSwitcher';
 
 import styles from './SideDrawer.module.scss';
 
 
 export default function SideDrawer(props) {
-
   const router = useRouter();
   const { locale } = router;
-  let t = locale;
-  if (t === 'en') {
-    t = en();
-  } else if (t === 'es') {
-    t = es();
-  } else {
-    t = nl();
-  };
+
+  let { t } = useTranslation();
 
   let drawerClasses = styles.sidedrawer;
   let tabindex = -1;
@@ -40,14 +31,14 @@ export default function SideDrawer(props) {
               <Link href="/" tabIndex={tabindex}>Home</Link>
             </li>
             <li className={styles.item} onClick={props.click}>
-              <Link href="/projects" tabIndex={tabindex}>{t.projects}</Link>
+              <Link href="/projects" tabIndex={tabindex}>{t("menu:projects")}</Link>
             </li>
             <li className={styles.item} onClick={props.click}>
-              <Link href="/visual-diary" tabIndex={tabindex}>{t.visual}</Link>
+              <Link href="/visual-diary" tabIndex={tabindex}>{t("menu:visual")}</Link>
             </li>
           </ul>
           <div className={styles.locale}>
-            <p className={styles.locale__lang}>{t.lang}:  {locale}</p>
+            <p className={styles.locale__lang}>{t("menu:lang")}:  {locale}</p>
               <LocaleSwitcher />
           </div>
         </nav>

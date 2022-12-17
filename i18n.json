@@ -1,0 +1,8 @@
+{
+  "locales": ["en", "es", "nl"],
+  "defaultLocale" : "en",
+  "pages": {
+    "*": ["footer", "menu"],
+    "/visual-diary": ["diary"]
+  }
+}
