@@ -1,4 +1,5 @@
-const path = require('path')
+const path = require('path');
+const nextTranslate = require('next-translate');
 
 module.exports = {
   sassOptions: {
@@ -10,7 +11,7 @@ module.exports = {
   },
   experimental: {
     forceSwcTransforms: true,
-  },
+  }
 }
 
 /** @type {import('next').NextConfig} */
@@ -21,9 +22,4 @@ const nextConfig = {
 
 module.exports = nextConfig
 
-module.exports = {
-  i18n: {
-    locales: ['en', 'es', 'nl'],
-    defaultLocale: 'en',
-  },
-}
+module.exports = nextTranslate();
