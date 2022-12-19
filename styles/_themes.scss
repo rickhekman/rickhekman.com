@@ -10,7 +10,7 @@ $color-link-yellow-light: #6E5502;
 $color-filter-yellow-light: brightness(0) saturate(100%) invert(32%) sepia(13%) saturate(4574%) hue-rotate(20deg) brightness(95%) contrast(98%);
 $color-filter-light: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(6172%) hue-rotate(246deg) brightness(113%) contrast(147%);
 $color-filter-hover-light: brightness(0) saturate(100%);
-$gradient-title-light: linear-gradient(-45deg, $color-text-light, $color-link-yellow-light, $color-link-red-light, $color-link-pink-light, $color-link-purple-light, $color-link-blue-light, $color-link-green-light);
+$gradient-title-light: linear-gradient(-45deg, $color-link-yellow-light, $color-link-red-light, $color-link-pink-light, $color-link-purple-light, $color-link-blue-light, $color-link-green-light);
 
 /* Dark Theme Colors */
 $color-bg-dark: #001329;
@@ -25,7 +25,7 @@ $color-filter-yellow-dark: brightness(0) saturate(100%) invert(77%) sepia(69%) s
 $color-filter-yellow-shadow-dark: brightness(0) saturate(100%) invert(77%) sepia(69%) saturate(1516%) hue-rotate(349deg) brightness(103%) contrast(103%) drop-shadow(0 -0.2em 0.5em #ffc40c);
 $color-filter-dark: brightness(0) saturate(100%) invert(71%) sepia(4%) saturate(6416%) hue-rotate(179deg) brightness(100%) contrast(97%);
 $color-filter-hover-dark: none;
-$gradient-title-dark: linear-gradient(-45deg,$color-text-dark, $color-link-yellow-dark, $color-link-red-dark, $color-link-pink-dark, $color-link-purple-dark, $color-link-blue-dark, $color-link-green-dark);
+$gradient-title-dark: linear-gradient(-45deg, $color-link-yellow-dark, $color-link-red-dark, $color-link-pink-dark, $color-link-purple-dark, $color-link-blue-dark, $color-link-green-dark);
 
 $themes: (
   light: (
