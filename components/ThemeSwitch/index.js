@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
-import BulbDark from '../SVG/BulbDark';
-import BulbLight from '../SVG/BulbLight';
+import MoonIcon from '../SVG/Moon';
+import MoonFillIcon from '../SVG/MoonFill';
+import SunIcon from '../SVG/Sun';
+import SunFillIcon from '../SVG/SunFill';
 
 import styles from './ThemeSwitch.module.scss';
 
@@ -23,14 +25,16 @@ export default function ThemeSwitch() {
     const currentTheme = theme === "system" ? systemTheme : theme;
     if (currentTheme === "dark") {
       return (
-        <button onClick={() => setTheme('light')} className={styles.button} type="button" aria-describedby="Light bulb turn on light theme">
-          <BulbLight />
+        <button onClick={() => setTheme('light')} className={`${styles.button} ${styles.moon}`} type="button" aria-describedby="Turn on light mode">
+          <MoonIcon />
+          <MoonFillIcon />
         </button>
       )
     }
     return (
-      <button onClick={() => setTheme('dark')} className={styles.button} type="button" aria-describedby="Dark bulb turn on dark theme">
-        <BulbDark />
+      <button onClick={() => setTheme('dark')} className={`${styles.button} ${styles.sun}`} type="button" aria-describedby="Turn on dark mode">
+        <SunIcon />
+        <SunFillIcon />
       </button>
     )
   }
