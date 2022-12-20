@@ -24,8 +24,6 @@ export default function SideDrawer(props) {
 
   const [isActive, setIsActive] = useState(false);
 
-
-
   return (
     <>
       <div className={drawerClasses}>
@@ -38,13 +36,18 @@ export default function SideDrawer(props) {
               <Link href="/projects" tabIndex={tabindex}>{t("menu:projects")}</Link>
             </li>
             <li className={styles.item}>
-              <button type="button" aria-label={t("menu:open-photo-submenu-aria")} className={styles.button} onClick={() => setIsActive(!isActive)}>{t("menu:photography")} {isActive ? '-' : '+'} </button>
-                {isActive && <ul className={styles.submenu}>
-                    <li className={styles.subitem} onClick={props.click}>
-                      <Link href="/visual-diary" tabIndex={tabindex}>{t("menu:visual")}</Link>
-                    </li>
-                  </ul>
-                }
+              <button type="button"
+                aria-label={t("menu:open-photo-submenu-aria")}
+                className={styles.button}
+                onClick={() => setIsActive(!isActive)}>
+                  {t("menu:photography")} {isActive ? '-' : '+'}
+                </button>
+                  {isActive && <ul className={styles.submenu}>
+                      <li className={styles.subitem} onClick={props.click}>
+                        <Link href="/visual-diary" tabIndex={tabindex}>{t("menu:visual")}</Link>
+                      </li>
+                    </ul>
+                  }
             </li>
           </ul>
           <div className={styles.locale}>
