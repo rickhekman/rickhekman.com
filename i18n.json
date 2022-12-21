@@ -3,6 +3,6 @@
   "defaultLocale" : "en",
   "pages": {
     "*": ["footer", "menu"],
-    "/visual-diary": ["diary"]
+    "/photography/visual-diary": ["diary"]
   }
 }

@@ -49,7 +49,7 @@ export default function SideDrawer(props) {
                 </button>
                   {isActive && <ul className={styles.submenu}>
                       <li className={styles.subitem} onClick={submenuHandler}>
-                        <Link href="/visual-diary" tabIndex={tabindex}>{t("menu:visual")}</Link>
+                        <Link href="/photography/visual-diary" tabIndex={tabindex}>{t("menu:visual")}</Link>
                       </li>
                     </ul>
                   }
