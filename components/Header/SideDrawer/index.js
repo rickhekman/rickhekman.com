@@ -22,6 +22,11 @@ export default function SideDrawer(props) {
     tabindex = 0;
   }
 
+  const submenuHandler = () => {
+    setIsActive(null);
+    props.click();
+  }
+
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -43,7 +48,7 @@ export default function SideDrawer(props) {
                   {t("menu:photography")} {isActive ? '-' : '+'}
                 </button>
                   {isActive && <ul className={styles.submenu}>
-                      <li className={styles.subitem} onClick={props.click}>
+                      <li className={styles.subitem} onClick={submenuHandler}>
                         <Link href="/visual-diary" tabIndex={tabindex}>{t("menu:visual")}</Link>
                       </li>
                     </ul>
