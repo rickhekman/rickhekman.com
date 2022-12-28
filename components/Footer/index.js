@@ -8,8 +8,6 @@ import GitHubIcon from '../SVG/GitHubIcon';
 import LinkedInIcon from '../SVG/LinkedInIcon';
 import InstagramIcon from '../SVG/InstagramIcon';
 
-
-
 import styles from './Footer.module.scss';
 
 export default function Footer() {
