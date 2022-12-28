@@ -2,6 +2,6 @@
   "locales": ["en", "es", "nl"],
   "defaultLocale" : "en",
   "pages": {
-    "*": ["footer", "menu"]
+    "*": ["footer", "menu", "title"]
   }
 }
