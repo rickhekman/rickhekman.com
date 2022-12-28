@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import useTranslation from 'next-translate/useTranslation';
 
 import MoonIcon from '../SVG/Moon';
 import MoonFillIcon from '../SVG/MoonFill';
@@ -9,8 +10,9 @@ import SunFillIcon from '../SVG/SunFill';
 import styles from './ThemeSwitch.module.scss';
 
 export default function ThemeSwitch() {
-  const [mounted, setMounted] = useState(false)
-  const { systemTheme, theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false);
+  const { systemTheme, theme, setTheme } = useTheme();
+  let { t } = useTranslation();
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
@@ -25,14 +27,14 @@ export default function ThemeSwitch() {
     const currentTheme = theme === "system" ? systemTheme : theme;
     if (currentTheme === "dark") {
       return (
-        <button onClick={() => setTheme('light')} className={`${styles.button} ${styles.moon}`} type="button" aria-describedby="Turn on light mode">
+        <button onClick={() => setTheme('light')} className={`${styles.button} ${styles.moon}`} type="button" aria-describedby={t('menu:lightmode')}>
           <MoonIcon />
           <MoonFillIcon />
         </button>
       )
     }
     return (
-      <button onClick={() => setTheme('dark')} className={`${styles.button} ${styles.sun}`} type="button" aria-describedby="Turn on dark mode">
+      <button onClick={() => setTheme('dark')} className={`${styles.button} ${styles.sun}`} type="button" aria-describedby={t('menu:darkmode')}>
         <SunIcon />
         <SunFillIcon />
       </button>
