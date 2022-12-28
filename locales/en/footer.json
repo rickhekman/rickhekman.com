@@ -1,3 +1,8 @@
 {
-  "description": "Let's stay in touch"
+  "description": "Let's stay in touch",
+  "email": "Rick Hekman email",
+  "phone": "Rick Hekman phone",
+  "github": "Rick Hekman on GitHub",
+  "linkedin": "Rick Hekman on LinkedIn",
+  "insta": "Rick Hekman on Instagram"
 }

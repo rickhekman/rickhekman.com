@@ -3,5 +3,7 @@
   "photography": "Fotografía",
   "open-photo-submenu-aria": "Abrir el menú de fotografía",
   "visual": "Diario visual",
-  "lang": "Idioma"
+  "lang": "Idioma",
+  "darkmode": "Activar el modo oscuro",
+  "lightmode": "Activar el modo luz"
 }

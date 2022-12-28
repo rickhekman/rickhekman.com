@@ -2,7 +2,6 @@
   "locales": ["en", "es", "nl"],
   "defaultLocale" : "en",
   "pages": {
-    "*": ["footer", "menu"],
-    "/photography/visual-diary": ["diary"]
+    "*": ["footer", "menu", "title"]
   }
 }
