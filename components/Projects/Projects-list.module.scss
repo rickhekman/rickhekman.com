@@ -1,0 +1,7 @@
+@import '../../styles/variables';
+
+.list {
+  display: flex;
+  border: 3px solid red;
+  max-width: $container-wide;
+}
