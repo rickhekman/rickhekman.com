@@ -22,7 +22,7 @@ const PROJECTS = [
     thumbnail: "images/projects/project02-thumbnail.webp",
     alt: "Project 2",
     url: "#",
-    image: "images/projects/projects02-preview.webp",
+    preview: "images/projects/projects02-preview.webp",
     alt02: "Project 2 app preview",
     intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
     frontend: "#",
