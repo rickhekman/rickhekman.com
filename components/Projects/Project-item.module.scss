@@ -1,0 +1,57 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/themes";
+
+.item {
+  // border: 1px solid red;
+  position: relative;
+  border: 1px solid grey;
+  border-radius: .75em;
+
+  // display: flex;
+  // flex-grow: 1;
+  // flex-direction: column;
+  @include respond(mobile) {
+    flex-basis: 48%;
+  }
+}
+
+.thumbnail {
+  position: relative;
+  display: block;
+  height: 0;
+  padding-top: 75%;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  z-index: 0;
+  border-radius: .75em .75em 0 0
+}
+
+.description {
+  padding: 1em;
+}
+
+.link {
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.title {
+  font-size: $font-size--large;
+}

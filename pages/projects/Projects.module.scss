@@ -1,0 +1,8 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/themes";
+
+.container {
+  // border: 2px solid yellow;
+  max-width: $container-wide;
+}
