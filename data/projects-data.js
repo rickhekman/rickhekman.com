@@ -7,7 +7,7 @@ const PROJECTS = [
     url: "#",
     preview: "images/projects/stekjesruil-grad-preview.webp",
     alt02: "Stekjesruil app preview",
-    intro: "Web application created during the Full Stack Development bootcamp from Codaisseur Academy Amsterdam.",
+    intro: "Web application created during the Full Stack Development bootcamp at Codaisseur Academy Amsterdam.",
     frontend: "https://github.com/rickhekman/stekjesruil-frontend",
     backend: "https://github.com/rickhekman/stekjesruil-backend",
     description: `
@@ -32,6 +32,23 @@ const PROJECTS = [
       <p>Description 1</p>
       <p>Description 2</p>
     `
+  },
+  {
+    id: "project-three",
+    title: "Project 3",
+    thumbnail: "images/projects/project02-thumbnail.webp",
+    alt: "Project 3",
+    url: "#",
+    preview: "images/projects/projects02-preview.webp",
+    alt02: "Project 2 app preview",
+    intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    frontend: "#",
+    backend: "#",
+    description: `
+      <h2>Desription title</h2>
+      <p>Description 1</p>
+      <p>Description 2</p>
+    `
   }
 ];
 
@@ -39,6 +56,6 @@ export function getAllProjects() {
   return PROJECTS;
 }
 
-export function getProjectsById(id) {
-  return PROJECTS.find((e) => e.id === id);
+export function getProjectById(id) {
+  return PROJECTS.find((project) => project.id === id);
 }
