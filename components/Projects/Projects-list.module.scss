@@ -5,12 +5,9 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  // justify-content: space-between;
   gap: 2.2vmax;
   padding-left: 0;
   list-style: none;
-
-  @include respond(mobile) {
-    // gap: 0;
-  }
 }
