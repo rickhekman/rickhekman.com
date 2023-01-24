@@ -1,0 +1,24 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/themes";
+
+.container {
+  max-width: $container-normal;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.title {
+  font-size: $font-size--x-large;
+  text-align: center;
+
+  @include respond(tablet) {
+    font-size: $font-size--huge;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+

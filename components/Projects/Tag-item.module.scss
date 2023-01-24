@@ -1,0 +1,17 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/themes";
+
+.item {
+  padding: .15em .5em;
+  border-radius: .5em;
+
+  @include theme() {
+    border: 1px solid get('text-color');
+  }
+
+  p {
+    margin: 0;
+    font-size: $font-size--x-small;
+  }
+}
