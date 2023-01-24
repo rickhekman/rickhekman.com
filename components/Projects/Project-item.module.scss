@@ -1,0 +1,103 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/themes";
+
+.item {
+  position: relative;
+  border-radius: .75em;
+
+  @include theme() {
+    background-color: get('card-background');
+    box-shadow: get('card-box-shadow');
+  }
+
+  /* More than two projects width*/
+  // @include respond(mobile) {
+  //   flex-basis: 48%;
+  // }
+  @include respond(mobile) {
+    flex-basis: 65%;
+  }
+
+  @include respond(tablet) {
+    &:hover {
+      .figure {
+        &::after {
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+}
+
+.figure {
+  position: relative;
+  display: block;
+  height: 0;
+  padding-top: 75%;
+
+  @include respond(tablet) {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: .15;
+      cursor: pointer;
+      // background-color: $color-bg-dark;
+      border-radius: .75em .75em 0 0;
+      transition: all .4s ease-in-out;
+
+      @include theme() {
+        background-color: get('bg-color')
+      }
+    }
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  z-index: 0;
+  border-radius: .75em .75em 0 0;
+}
+
+.description {
+  padding: 1em;
+}
+
+.intro {
+  margin-bottom: 1.5em;
+}
+
+.tags {
+  opacity: .7;
+  margin-bottom: 1em;
+}
+
+.link {
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.title {
+  font-size: $font-size--large;
+}

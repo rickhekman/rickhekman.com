@@ -1,0 +1,13 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/themes";
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // justify-content: space-between;
+  gap: 2.2vmax;
+  padding-left: 0;
+  list-style: none;
+}

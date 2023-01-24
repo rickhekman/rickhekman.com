@@ -1,0 +1,9 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/themes";
+
+.list {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+}

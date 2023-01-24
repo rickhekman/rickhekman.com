@@ -1,0 +1,38 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/themes";
+
+.container {
+  max-width: $container-normal;
+  // width: 100%;
+}
+
+.title {
+  font-size: $font-size--x-large;
+  text-align: center;
+
+  @include respond(tablet) {
+    font-size: $font-size--huge;
+  }
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+
+.intro {
+  text-align: center;
+  font-style: italic;
+}
+
+.about {
+  margin-bottom: 3em;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
