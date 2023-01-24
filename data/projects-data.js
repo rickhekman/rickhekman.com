@@ -9,7 +9,8 @@ const PROJECTS = [
     preview: "images/projects/stekjesruil-grad-preview.webp",
     previewalt: "Stekjesruil app preview",
     intro: "Web application created during the Full Stack Development bootcamp at Codaisseur Academy Amsterdam.",
-    about: "Stekjesruil (translated from Dutch as cuttings swapping). My passion for plants led me to start organizing ‘Stekjesruil’ events. It is an event to swap plant cuttings, meet like-minded people, share and exchange ideas. It is organized each time at a different location in The Hague, The Netherlands.",
+    about: `<p>Stekjesruil (translated from Dutch as cuttings swapping). <br>
+     My passion for plants led me to start organizing ‘Stekjesruil’ events. It is an event to swap plant cuttings, meet like-minded people, share and exchange ideas. It is organized each time at a different location in The Hague, The Netherlands.</p>`,
     frontend: "https://github.com/rickhekman/stekjesruil-frontend",
     backend: "https://github.com/rickhekman/stekjesruil-backend",
     tools: `
@@ -41,7 +42,7 @@ const PROJECTS = [
         </li>
       </ul>
     `,
-    licence: "https://en.wikipedia.org/wiki/Beerware",
+    license: "https://en.wikipedia.org/wiki/Beerware",
     description: ``
   }
 ];

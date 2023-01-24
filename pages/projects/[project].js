@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 
+import TagsList from "../../components/Projects/Tags-list";
+
 import { getProjectById } from "../../data/projects-data";
 
 import styles from "./Project.module.scss";
@@ -30,11 +32,31 @@ export default function ProjectDetailPage() {
           height={900}
           className={styles.image}
           loading="lazy"
-          />
-        <a href={'/' + project.url}><p>Live site</p></a>
+        />
+        <p className={styles.intro}>
+          {project.intro}
+        </p>
+        <div className={styles.tags}>
+          <TagsList items={project.tags}/>
+        </div>
+        <h3>About</h3>
+        <div dangerouslySetInnerHTML={{ __html: project.about}} className={styles.about}></div>
+        <h3>Preview</h3>
+        <Image src={'/' + project.preview}
+          alt={project.previewalt}
+          width={900}
+          height={900}
+          className={styles.image}
+          loading="lazy"
+        />
+        <a href={'/' + project.url}><p>Preview</p></a>
+        <h3>Source code</h3>
         <a href={project.frontend}><p>Frontend code</p></a>
         <a href={project.backend}><p>Backend code</p></a>
-        <div dangerouslySetInnerHTML={{ __html: project.description}}></div>
+        <h3>Build with</h3>
+        <div dangerouslySetInnerHTML={{ __html: project.tools}}></div>
+        <h3>License</h3>
+        <a href={project.license}><p>Beerware</p></a>
       </div>
     </>
   )

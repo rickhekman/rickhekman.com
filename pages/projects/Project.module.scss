@@ -4,8 +4,7 @@
 
 .container {
   max-width: $container-normal;
-  width: 100%;
-  border: 1px solid red;
+  // width: 100%;
 }
 
 .title {
@@ -15,6 +14,21 @@
   @include respond(tablet) {
     font-size: $font-size--huge;
   }
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+
+.intro {
+  text-align: center;
+  font-style: italic;
+}
+
+.about {
+  margin-bottom: 3em;
 }
 
 .image {
