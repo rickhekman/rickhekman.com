@@ -2,53 +2,47 @@ const PROJECTS = [
   {
     id: "stekjesruil-graduation",
     title: "Stekjesruil - Graduation Project",
-    thumbnail: "images/projects/stekjesruil-grad-thumbnail.webp",
+    image: "images/projects/stekjesruil-grad.webp",
     alt: "Stekjesruil",
     url: "#",
+    tags: ["React", "Full Stack"],
     preview: "images/projects/stekjesruil-grad-preview.webp",
-    alt02: "Stekjesruil app preview",
+    previewalt: "Stekjesruil app preview",
     intro: "Web application created during the Full Stack Development bootcamp at Codaisseur Academy Amsterdam.",
+    about: "Stekjesruil (translated from Dutch as cuttings swapping). My passion for plants led me to start organizing ‘Stekjesruil’ events. It is an event to swap plant cuttings, meet like-minded people, share and exchange ideas. It is organized each time at a different location in The Hague, The Netherlands.",
     frontend: "https://github.com/rickhekman/stekjesruil-frontend",
     backend: "https://github.com/rickhekman/stekjesruil-backend",
-    description: `
-      <h2>Desription title</h2>
-      <p>Description 1</p>
-      <p>Description 2</p>
-    `
-  },
-  {
-    id: "project-two",
-    title: "Project 2",
-    thumbnail: "images/projects/project02-thumbnail.webp",
-    alt: "Project 2",
-    url: "#",
-    preview: "images/projects/projects02-preview.webp",
-    alt02: "Project 2 app preview",
-    intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    frontend: "#",
-    backend: "#",
-    description: `
-      <h2>Desription title</h2>
-      <p>Description 1</p>
-      <p>Description 2</p>
-    `
-  },
-  {
-    id: "project-three",
-    title: "Project 3",
-    thumbnail: "images/projects/project02-thumbnail.webp",
-    alt: "Project 3",
-    url: "#",
-    preview: "images/projects/projects02-preview.webp",
-    alt02: "Project 2 app preview",
-    intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    frontend: "#",
-    backend: "#",
-    description: `
-      <h2>Desription title</h2>
-      <p>Description 1</p>
-      <p>Description 2</p>
-    `
+    tools: `
+      <ul>
+        <li>
+          <p>
+            <a href="https://reactjs.org/">React</a> - A JavaScript library for building user interfaces.
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://react.i18next.com/">React i18next</a>  - Internationalization for React.
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://redux.js.org/">Redux</a> - State container for JavaScript apps.
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://axios-http.com/">Axios</a> - Promise based HTTP client for the browser and node.js.
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://sass-lang.com/">Sass</a> - CSS with superpowers.
+          </p>
+        </li>
+      </ul>
+    `,
+    licence: "https://en.wikipedia.org/wiki/Beerware",
+    description: ``
   }
 ];
 

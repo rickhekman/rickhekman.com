@@ -13,7 +13,8 @@ export default function ProjectsList(props) {
         id={project.id}
         title={project.title}
         alt={project.alt}
-        thumbnail={project.thumbnail}
+        tags={project.tags}
+        image={project.image}
         intro={project.intro}
         />
       )
