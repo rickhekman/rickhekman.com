@@ -40,12 +40,12 @@ export default function ProjectDetailPage() {
         <div className={styles.tags}>
           <TagsList items={project.tags}/>
         </div>
-        <section>
-          <h3>About</h3>
+        <section className={styles.section}>
+          <h2>About</h2>
           <div dangerouslySetInnerHTML={{ __html: project.about}} className={styles.about}></div>
         </section>
         <section className={styles.section}>
-          <h3>Preview</h3>
+          <h2>Preview</h2>
           <Image src={'/' + project.preview}
             alt={project.previewalt}
             width={900}
@@ -56,17 +56,20 @@ export default function ProjectDetailPage() {
           <a href={'/' + project.url}><p>Preview</p></a>
         </section>
         <section className={styles.section}>
-          <h3>Source code</h3>
-          <a href={project.frontend}><p>Frontend code</p></a>
-          <a href={project.backend}><p>Backend code</p></a>
+          <h2>Source code</h2>
+          <a href={project.frontend} target='_blank' rel='noopener noreferrer'><p>Frontend code</p></a>
+          <a href={project.backend} target='_blank' rel='noopener noreferrer'><p>Backend code</p></a>
         </section>
         <section className={styles.section}>
-          <h3>Build with</h3>
-          <div dangerouslySetInnerHTML={{ __html: project.tools}}></div>
+          <h2>Build with</h2>
+          <h5>Front End:</h5>
+          <div dangerouslySetInnerHTML={{ __html: project.toolsfontend}} className={styles.tools}></div>
+          <h5>Backend End:</h5>
+          <div dangerouslySetInnerHTML={{ __html: project.toolsbackend}} className={styles.tools}></div>
         </section>
         <section className={styles.section}>
-          <h3>License</h3>
-          <a href={project.license}><p>Beerware</p></a>
+          <h2>License</h2>
+          <a href={project.license} target='_blank' rel='noopener noreferrer'><p>Beerware</p></a>
         </section>
       </div>
     </LayoutTop>

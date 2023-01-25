@@ -7,12 +7,12 @@
 }
 
 .title {
-  font-size: $font-size--x-large;
+  font-size: $font-size--huge;
   text-align: center;
   margin-bottom: 1.5em;
 
   @include respond(tablet) {
-    font-size: $font-size--huge;
+    font-size: $font-size--gigantic;
   }
 }
 
@@ -32,8 +32,19 @@
   height: auto;
 }
 
+
 .section {
   margin: 3em 0;
+
+  h2 {
+    font-size: $font-size--x-large;
+  }
+
+  h5 {
+    @include theme() {
+      opacity: .7;
+    }
+  }
 
   a {
     @include theme() {
@@ -44,5 +55,14 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+
+}
+
+.tools {
+  ul {
+    list-style: none;
+    margin: 1.5em 0;
   }
 }
