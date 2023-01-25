@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 import TagsList from "../../components/Projects/Tags-list";
+import LayoutTop from "../../components/Layout-top";
 
 import { getProjectById } from "../../data/projects-data";
 
@@ -23,7 +24,7 @@ export default function ProjectDetailPage() {
   };
 
   return (
-    <>
+    <LayoutTop>
       <div className={styles.container}>
         <h1 className={styles.title}>{project.title}</h1>
         <Image src={'/' + project.image}
@@ -58,6 +59,6 @@ export default function ProjectDetailPage() {
         <h3>License</h3>
         <a href={project.license}><p>Beerware</p></a>
       </div>
-    </>
+    </LayoutTop>
   )
 };

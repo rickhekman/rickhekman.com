@@ -2,6 +2,14 @@
 @import "../../styles/variables";
 @import "../../styles/themes";
 
+// #main {
+
+// }
+
+// :global(main) {
+//   @include container-top();
+// }
+
 .container {
   max-width: $container-normal;
   // width: 100%;
