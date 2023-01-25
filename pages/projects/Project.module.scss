@@ -34,4 +34,15 @@
 
 .section {
   margin: 3em 0;
+
+  a {
+    @include theme() {
+      color: get('link-blue');
+    }
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
