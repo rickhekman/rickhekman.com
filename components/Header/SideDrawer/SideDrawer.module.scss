@@ -46,7 +46,7 @@
     position: relative;
 
     @include theme() {
-      color: get('link-blue');
+      color: get('color-blue');
     }
 
     &::before {
@@ -92,7 +92,7 @@
   font-weight: bold;
 
   @include theme() {
-    color: get('link-blue');
+    color: get('color-blue');
   }
 
   &::before {
@@ -176,7 +176,7 @@
       font-size: $font-size--x-large;
 
       @include theme() {
-        color: get('link-blue');
+        color: get('color-blue');
       }
 
       &:hover {

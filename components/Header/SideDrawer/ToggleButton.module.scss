@@ -14,7 +14,7 @@
   z-index: 2000;
 
   @include theme() {
-    background-color: get('link-blue');
+    background-color: get('color-blue');
   }
 
   @include respond(mobile) {
