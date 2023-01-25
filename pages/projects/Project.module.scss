@@ -4,22 +4,22 @@
 
 .container {
   max-width: $container-normal;
-  // width: 100%;
 }
 
 .title {
-  font-size: $font-size--x-large;
+  font-size: $font-size--huge;
   text-align: center;
+  margin-bottom: 1.5em;
 
   @include respond(tablet) {
-    font-size: $font-size--huge;
+    font-size: $font-size--gigantic;
   }
 }
 
 .tags {
   display: flex;
   justify-content: center;
-  margin-bottom: 4em;
+  margin: 1.5em 0 3.5em 0;
 }
 
 .intro {
@@ -27,12 +27,42 @@
   font-style: italic;
 }
 
-.about {
-  margin-bottom: 3em;
-}
-
 .image {
   width: 100%;
   height: auto;
 }
 
+
+.section {
+  margin: 3em 0;
+
+  h2 {
+    font-size: $font-size--x-large;
+  }
+
+  h5 {
+    @include theme() {
+      opacity: .7;
+    }
+  }
+
+  a {
+    @include theme() {
+      color: get('color-blue');
+    }
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+
+}
+
+.tools {
+  ul {
+    list-style: none;
+    margin: 1.5em 0;
+  }
+}

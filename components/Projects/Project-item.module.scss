@@ -7,7 +7,7 @@
   border-radius: .75em;
 
   @include theme() {
-    background-color: get('card-background');
+    background-color: get('bg-color-lighter');
     box-shadow: get('card-box-shadow');
   }
 
@@ -34,9 +34,9 @@
 
 .figure {
   position: relative;
-  display: block;
   height: 0;
-  padding-top: 75%;
+  // padding-top: 75%;
+  padding-top: 55%;
 
   @include respond(tablet) {
     &::after {
@@ -49,7 +49,6 @@
       left: 0;
       opacity: .15;
       cursor: pointer;
-      // background-color: $color-bg-dark;
       border-radius: .75em .75em 0 0;
       transition: all .4s ease-in-out;
 
@@ -65,8 +64,6 @@
   top: 0;
   right: 0;
   left: 0;
-  width: 100% !important;
-  height: 100% !important;
   object-fit: cover;
   z-index: 0;
   border-radius: .75em .75em 0 0;
