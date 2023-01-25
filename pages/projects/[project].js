@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 import TagsList from "../../components/Projects/Tags-list";
+import LayoutTop from "../../components/Layout-top";
 
 import { getProjectById } from "../../data/projects-data";
 
@@ -23,7 +24,7 @@ export default function ProjectDetailPage() {
   };
 
   return (
-    <>
+    <LayoutTop>
       <div className={styles.container}>
         <h1 className={styles.title}>{project.title}</h1>
         <Image src={'/' + project.image}
@@ -39,25 +40,38 @@ export default function ProjectDetailPage() {
         <div className={styles.tags}>
           <TagsList items={project.tags}/>
         </div>
-        <h3>About</h3>
-        <div dangerouslySetInnerHTML={{ __html: project.about}} className={styles.about}></div>
-        <h3>Preview</h3>
-        <Image src={'/' + project.preview}
-          alt={project.previewalt}
-          width={900}
-          height={900}
-          className={styles.image}
-          loading="lazy"
-        />
-        <a href={'/' + project.url}><p>Preview</p></a>
-        <h3>Source code</h3>
-        <a href={project.frontend}><p>Frontend code</p></a>
-        <a href={project.backend}><p>Backend code</p></a>
-        <h3>Build with</h3>
-        <div dangerouslySetInnerHTML={{ __html: project.tools}}></div>
-        <h3>License</h3>
-        <a href={project.license}><p>Beerware</p></a>
+        <section className={styles.section}>
+          <h2>About</h2>
+          <div dangerouslySetInnerHTML={{ __html: project.about}} className={styles.about}></div>
+        </section>
+        <section className={styles.section}>
+          <h2>Preview</h2>
+          <Image src={'/' + project.preview}
+            alt={project.previewalt}
+            width={900}
+            height={900}
+            className={styles.image}
+            loading="lazy"
+          />
+          <a href={'/' + project.url}><p>Preview</p></a>
+        </section>
+        <section className={styles.section}>
+          <h2>Source code</h2>
+          <a href={project.frontend} target='_blank' rel='noopener noreferrer'><p>Frontend code</p></a>
+          <a href={project.backend} target='_blank' rel='noopener noreferrer'><p>Backend code</p></a>
+        </section>
+        <section className={styles.section}>
+          <h2>Build with</h2>
+          <h5>Front End:</h5>
+          <div dangerouslySetInnerHTML={{ __html: project.toolsfontend}} className={styles.tools}></div>
+          <h5>Backend End:</h5>
+          <div dangerouslySetInnerHTML={{ __html: project.toolsbackend}} className={styles.tools}></div>
+        </section>
+        <section className={styles.section}>
+          <h2>License</h2>
+          <a href={project.license} target='_blank' rel='noopener noreferrer'><p>Beerware</p></a>
+        </section>
       </div>
-    </>
+    </LayoutTop>
   )
 };

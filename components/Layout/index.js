@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         <title>Rick Hekman, Creative Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container}>
+      <div className={styles.wrapper}>
         <Header />
         <main className={styles.main}>
           {children}
