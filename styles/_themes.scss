@@ -1,45 +1,45 @@
 /* Light Theme Colors */
 $color-bg-light: #fefefa;
 $color-text-light: #001329;
-$color-link-green-light: #00663C;
-$color-link-blue-light: #0000ff;
-$color-link-red-light: #a40000;
-$color-link-pink-light: #A3008C;
-$color-link-purple-light: #69359c;
-$color-link-yellow-light: #6E5502;
+$color-green-light: #00663C;
+$color-blue-light: #0000ff;
+$color-red-light: #a40000;
+$color-pink-light: #A3008C;
+$color-purple-light: #69359c;
+$color-yellow-light: #6E5502;
 $color-filter-yellow-light: brightness(0) saturate(100%) invert(32%) sepia(13%) saturate(4574%) hue-rotate(20deg) brightness(95%) contrast(98%);
 $color-filter-light: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(6172%) hue-rotate(246deg) brightness(113%) contrast(147%);
 $color-filter-hover-light: brightness(0) saturate(100%);
-$gradient-title-light: linear-gradient(-45deg, $color-link-yellow-light, $color-link-yellow-light, $color-link-red-light, $color-link-purple-light, $color-link-blue-light,  $color-link-blue-light, $color-link-green-light, $color-link-green-light);
+$gradient-title-light: linear-gradient(-45deg, $color-yellow-light, $color-yellow-light, $color-red-light, $color-purple-light, $color-blue-light,  $color-blue-light, $color-green-light, $color-green-light);
 $color-bg-light-02:white;
 $card-box-shadow-light: 0 0.4em 1em rgb(0 0 0 / 10%);
 
 /* Dark Theme Colors */
 $color-bg-dark: #001329;
 $color-text-dark: #fefefa;
-$color-link-green-dark: #39ff14;
-$color-link-blue-dark: #71BBFA;
-$color-link-red-dark: #FF7761;
-$color-link-pink-dark: #FFCCCB;
-$color-link-purple-dark: #acace6;
-$color-link-yellow-dark: #ffc40c;
+$color-green-dark: #39ff14;
+$color-blue-dark: #71BBFA;
+$color-red-dark: #FF7761;
+$color-pink-dark: #FFCCCB;
+$color-purple-dark: #acace6;
+$color-yellow-dark: #ffc40c;
 $color-filter-yellow-dark: brightness(0) saturate(100%) invert(77%) sepia(69%) saturate(1516%) hue-rotate(349deg) brightness(103%) contrast(103%);
 $color-filter-yellow-shadow-dark: brightness(0) saturate(100%) invert(77%) sepia(69%) saturate(1516%) hue-rotate(349deg) brightness(103%) contrast(103%) drop-shadow(0 -0.2em 0.5em #ffc40c);
 $color-filter-dark: brightness(0) saturate(100%) invert(71%) sepia(4%) saturate(6416%) hue-rotate(179deg) brightness(100%) contrast(97%);
 $color-filter-hover-dark: none;
-$gradient-title-dark: linear-gradient(-45deg, $color-link-yellow-dark, $color-link-yellow-dark, $color-link-red-dark, $color-link-purple-dark, $color-link-blue-dark,  $color-link-blue-dark, $color-link-green-dark, $color-link-green-dark);
+$gradient-title-dark: linear-gradient(-45deg, $color-yellow-dark, $color-yellow-dark, $color-red-dark, $color-purple-dark, $color-blue-dark,  $color-blue-dark, $color-green-dark, $color-green-dark);
 $color-bg-dark-02: #112842;
 $card-box-shadow-dark:  none;
 
 $themes: (
   light: (
     'text-color': $color-text-light,
-    'link-green': $color-link-green-light,
-    'link-blue': $color-link-blue-light,
-    'link-red': $color-link-red-light,
-    'link-yellow': $color-link-yellow-light,
-    'link-pink': $color-link-pink-light,
-    'link-purple': $color-link-purple-light,
+    'color-green': $color-green-light,
+    'color-blue': $color-blue-light,
+    'color-red': $color-red-light,
+    'color-yellow': $color-yellow-light,
+    'color-pink': $color-pink-light,
+    'color-purple': $color-purple-light,
     'bg-color': $color-bg-light,
     'filter-color': $color-filter-light,
     'filter-yellow': $color-filter-yellow-light,
@@ -51,12 +51,12 @@ $themes: (
   ),
   dark: (
     'text-color': $color-text-dark,
-    'link-green': $color-link-green-dark,
-    'link-blue': $color-link-blue-dark,
-    'link-red': $color-link-red-dark,
-    'link-yellow': $color-link-yellow-dark,
-    'link-pink': $color-link-pink-dark,
-    'link-purple': $color-link-purple-dark,
+    'color-green': $color-green-dark,
+    'color-blue': $color-blue-dark,
+    'color-red': $color-red-dark,
+    'color-yellow': $color-yellow-dark,
+    'color-pink': $color-pink-dark,
+    'color-purple': $color-purple-dark,
     'bg-color': $color-bg-dark,
     'filter-color': $color-filter-dark,
     'filter-yellow': $color-filter-yellow-dark,

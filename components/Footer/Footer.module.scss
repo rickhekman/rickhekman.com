@@ -24,7 +24,7 @@
     text-decoration: none;
 
     @include theme() {
-      color: get('link-blue');
+      color: get('color-blue');
     }
 
     &:hover {
