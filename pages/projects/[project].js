@@ -40,24 +40,34 @@ export default function ProjectDetailPage() {
         <div className={styles.tags}>
           <TagsList items={project.tags}/>
         </div>
-        <h3>About</h3>
-        <div dangerouslySetInnerHTML={{ __html: project.about}} className={styles.about}></div>
-        <h3>Preview</h3>
-        <Image src={'/' + project.preview}
-          alt={project.previewalt}
-          width={900}
-          height={900}
-          className={styles.image}
-          loading="lazy"
-        />
-        <a href={'/' + project.url}><p>Preview</p></a>
-        <h3>Source code</h3>
-        <a href={project.frontend}><p>Frontend code</p></a>
-        <a href={project.backend}><p>Backend code</p></a>
-        <h3>Build with</h3>
-        <div dangerouslySetInnerHTML={{ __html: project.tools}}></div>
-        <h3>License</h3>
-        <a href={project.license}><p>Beerware</p></a>
+        <section>
+          <h3>About</h3>
+          <div dangerouslySetInnerHTML={{ __html: project.about}} className={styles.about}></div>
+        </section>
+        <section className={styles.section}>
+          <h3>Preview</h3>
+          <Image src={'/' + project.preview}
+            alt={project.previewalt}
+            width={900}
+            height={900}
+            className={styles.image}
+            loading="lazy"
+          />
+          <a href={'/' + project.url}><p>Preview</p></a>
+        </section>
+        <section className={styles.section}>
+          <h3>Source code</h3>
+          <a href={project.frontend}><p>Frontend code</p></a>
+          <a href={project.backend}><p>Backend code</p></a>
+        </section>
+        <section className={styles.section}>
+          <h3>Build with</h3>
+          <div dangerouslySetInnerHTML={{ __html: project.tools}}></div>
+        </section>
+        <section className={styles.section}>
+          <h3>License</h3>
+          <a href={project.license}><p>Beerware</p></a>
+        </section>
       </div>
     </LayoutTop>
   )

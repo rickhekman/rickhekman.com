@@ -2,22 +2,14 @@
 @import "../../styles/variables";
 @import "../../styles/themes";
 
-// #main {
-
-// }
-
-// :global(main) {
-//   @include container-top();
-// }
-
 .container {
   max-width: $container-normal;
-  // width: 100%;
 }
 
 .title {
   font-size: $font-size--x-large;
   text-align: center;
+  margin-bottom: 1.5em;
 
   @include respond(tablet) {
     font-size: $font-size--huge;
@@ -27,7 +19,7 @@
 .tags {
   display: flex;
   justify-content: center;
-  margin-bottom: 4em;
+  margin: 1.5em 0 3.5em 0;
 }
 
 .intro {
@@ -35,12 +27,11 @@
   font-style: italic;
 }
 
-.about {
-  margin-bottom: 3em;
-}
-
 .image {
   width: 100%;
   height: auto;
 }
 
+.section {
+  margin: 3em 0;
+}
