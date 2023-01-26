@@ -26,7 +26,6 @@ $color-purple-dark: #acace6;
 $color-yellow-dark: #ffc40c;
 $color-green-btn-text-dark: #001329;
 $color-filter-yellow-dark: brightness(0) saturate(100%) invert(77%) sepia(69%) saturate(1516%) hue-rotate(349deg) brightness(103%) contrast(103%);
-$color-filter-yellow-shadow-dark: brightness(0) saturate(100%) invert(77%) sepia(69%) saturate(1516%) hue-rotate(349deg) brightness(103%) contrast(103%) drop-shadow(0 -0.2em 0.5em #ffc40c);
 $color-filter-dark: brightness(0) saturate(100%) invert(71%) sepia(4%) saturate(6416%) hue-rotate(179deg) brightness(100%) contrast(97%);
 $color-filter-hover-dark: none;
 $gradient-title-dark: linear-gradient(-45deg, $color-yellow-dark, $color-yellow-dark, $color-red-dark, $color-purple-dark, $color-blue-dark,  $color-blue-dark, $color-green-dark, $color-green-dark);
@@ -46,7 +45,6 @@ $themes: (
     'bg-color': $color-bg-light,
     'filter-color': $color-filter-light,
     'filter-yellow': $color-filter-yellow-light,
-    'filter-yellow-shadow': $color-filter-yellow-light,
     'filter-hover-color': $color-filter-hover-light,
     'text-gradient-animation': $gradient-title-light,
     'bg-color-lighter': $color-bg-light-02,
@@ -64,7 +62,6 @@ $themes: (
     'bg-color': $color-bg-dark,
     'filter-color': $color-filter-dark,
     'filter-yellow': $color-filter-yellow-dark,
-    'filter-yellow-shadow': $color-filter-yellow-shadow-dark,
     'filter-hover-color': $color-filter-hover-dark,
     'text-gradient-animation': $gradient-title-dark,
     'bg-color-lighter': $color-bg-dark-02,
