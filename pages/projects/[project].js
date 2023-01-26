@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import TagsList from "../../components/Projects/Tags-list";
 import LayoutTop from "../../components/Layout-top";
-import Button from "../../components/GreenButton";
+import GreenButton from "../../components/GreenButton";
 
 import { getProjectById } from "../../data/projects-data";
 
@@ -22,12 +22,6 @@ export default function ProjectDetailPage() {
         <h2>No project was found!</h2>
       </>
     )
-  };
-
- function clickDemo(e){
-    e.preventDefault();
-    console.log('The link was clicked.');
-    {project.url}
   };
 
   return (
@@ -64,8 +58,8 @@ export default function ProjectDetailPage() {
             <p>{project.previewtext}</p>
           </div>
           <div className={styles.preview__buttons}>
-            <Button link={project.url} text="Demo"/>
-            <Button link={project.source} text="Source code"/>
+            <GreenButton link={project.url} text="Demo"/>
+            <GreenButton link={project.source} text="Source code"/>
           </div>
         </section>
         <section className={styles.section}>

@@ -8,6 +8,7 @@
   border: none;
   font-size: $font-size--medium;
   text-decoration: none;
+  transition: opacity .2s ease-in-out;
 
   @include theme() {
     background-color: get('color-green');
@@ -15,7 +16,10 @@
   }
 
   &:hover {
-    opacity: .9;
     text-decoration: none !important;
+
+    @include respond(tablet) {
+      opacity: .9;
+    }
   }
 }
