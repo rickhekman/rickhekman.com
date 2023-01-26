@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/themes";
+
+.btn {
+  padding: .35em .75em;
+  border-radius: .45em;
+  border: none;
+  font-size: $font-size--medium;
+  text-decoration: none;
+  transition: opacity .2s ease-in-out;
+
+  @include theme() {
+    background-color: get('color-green');
+    color: get('btn-green-text') !important;
+  }
+
+  &:hover {
+    text-decoration: none !important;
+
+    @include respond(tablet) {
+      opacity: .9;
+    }
+  }
+}
