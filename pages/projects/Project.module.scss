@@ -32,18 +32,11 @@
   height: auto;
 }
 
-
 .section {
   margin: 3em 0;
 
   h2 {
     font-size: $font-size--x-large;
-  }
-
-  h5 {
-    @include theme() {
-      opacity: .7;
-    }
   }
 
   a {
@@ -56,8 +49,24 @@
       text-decoration: underline;
     }
   }
+}
 
+.about {
+  h5 {
+    margin-top: 1em;
+  }
 
+  ul {
+    padding-left: 1em;
+  }
+}
+
+.preview {
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
 }
 
 .tools {
