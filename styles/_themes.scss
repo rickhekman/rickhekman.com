@@ -7,6 +7,7 @@ $color-red-light: #a40000;
 $color-pink-light: #A3008C;
 $color-purple-light: #69359c;
 $color-yellow-light: #6E5502;
+$color-green-btn-text-light: #fefefa;
 $color-filter-yellow-light: brightness(0) saturate(100%) invert(32%) sepia(13%) saturate(4574%) hue-rotate(20deg) brightness(95%) contrast(98%);
 $color-filter-light: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(6172%) hue-rotate(246deg) brightness(113%) contrast(147%);
 $color-filter-hover-light: brightness(0) saturate(100%);
@@ -23,6 +24,7 @@ $color-red-dark: #FF7761;
 $color-pink-dark: #FFCCCB;
 $color-purple-dark: #acace6;
 $color-yellow-dark: #ffc40c;
+$color-green-btn-text-dark: #001329;
 $color-filter-yellow-dark: brightness(0) saturate(100%) invert(77%) sepia(69%) saturate(1516%) hue-rotate(349deg) brightness(103%) contrast(103%);
 $color-filter-yellow-shadow-dark: brightness(0) saturate(100%) invert(77%) sepia(69%) saturate(1516%) hue-rotate(349deg) brightness(103%) contrast(103%) drop-shadow(0 -0.2em 0.5em #ffc40c);
 $color-filter-dark: brightness(0) saturate(100%) invert(71%) sepia(4%) saturate(6416%) hue-rotate(179deg) brightness(100%) contrast(97%);
@@ -40,6 +42,7 @@ $themes: (
     'color-yellow': $color-yellow-light,
     'color-pink': $color-pink-light,
     'color-purple': $color-purple-light,
+    'btn-green-text':$color-green-btn-text-light,
     'bg-color': $color-bg-light,
     'filter-color': $color-filter-light,
     'filter-yellow': $color-filter-yellow-light,
@@ -57,6 +60,7 @@ $themes: (
     'color-yellow': $color-yellow-dark,
     'color-pink': $color-pink-dark,
     'color-purple': $color-purple-dark,
+    'btn-green-text':$color-green-btn-text-dark,
     'bg-color': $color-bg-dark,
     'filter-color': $color-filter-dark,
     'filter-yellow': $color-filter-yellow-dark,
