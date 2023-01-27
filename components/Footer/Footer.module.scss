@@ -2,13 +2,16 @@
 @import '../../styles/mixins';
 @import '../../styles/themes';
 
+.wrapper {
+  padding: 0 2em;
+}
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 2rem 0;
+  padding: 2em 0;
   border-top: 1px solid #eaeaea;
 
   @include respond(mobile) {
