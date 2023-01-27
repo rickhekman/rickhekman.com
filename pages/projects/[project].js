@@ -47,9 +47,6 @@ export default function ProjectDetailPage() {
           <div dangerouslySetInnerHTML={{ __html: project.about}} className={styles.about}></div>
         </section>
 
-        <section className={`${styles.section} ${styles.section__imagetop}`}>
-          <h2>Preview</h2>
-        </section>
         <Image src={'/' + project.preview}
           alt={project.previewalt}
           width={900}
@@ -57,7 +54,9 @@ export default function ProjectDetailPage() {
           className={`${styles.image} ${styles.image__preview}`}
           loading="lazy"
         />
-        <section className={`${styles.section} ${styles.section__imagebottom}`}>
+
+        <section className={styles.section}>
+          <h2>Preview</h2>
           <p>{project.previewtext}</p>
           <div className={styles.preview__buttons}>
             <GreenButton link={project.url} text="Demo"/>
