@@ -33,11 +33,12 @@ export default function SideDrawer(props) {
             <li onClick={props.click}>
               <Link href="/projects" tabIndex={tabindex}>{t("menu:projects")}</Link>
             </li>
-          </ul>
-          <div className={styles.locale}>
-            <p className={styles.locale__lang}>{t("menu:lang")}:  {locale}</p>
+            <li className={styles.locale}>
+              <p className={styles.locale__lang}>{t("menu:lang")}:  {locale}</p>
               <LocaleSwitcher />
-          </div>
+            </li>
+          </ul>
+
         </nav>
       </div>
     </>

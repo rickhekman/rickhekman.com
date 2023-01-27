@@ -21,6 +21,10 @@
     height: 3.5em;
     width: 3.5em;
   }
+
+  @include respond(tablet) {
+    position: fixed;
+  }
 }
 
 .line {
