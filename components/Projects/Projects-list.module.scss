@@ -8,6 +8,10 @@
   justify-content: center;
   // justify-content: space-between;
   gap: 2.2vmax;
-  padding-left: 0;
+  padding: 0 1em;
   list-style: none;
+
+  @include respond(tablet) {
+    padding: 0 2em;
+  }
 }

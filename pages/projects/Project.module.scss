@@ -10,9 +10,48 @@
   font-size: $font-size--huge;
   text-align: center;
   margin-bottom: 1.5em;
+  padding: 0 1rem;
+
+  @include respond(mobile) {
+    padding: 0 2rem;
+  }
 
   @include respond(tablet) {
     font-size: $font-size--gigantic;
+    padding: 0;
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  margin-bottom: .5em;
+
+  &__cover {
+    padding: 0;
+  }
+
+  &__preview {
+    margin-top: .75em;
+    padding: 0 1rem;
+
+    @include respond(tablet) {
+      padding: 0;
+    }
+  }
+}
+
+.intro {
+  text-align: center;
+  font-style: italic;
+  padding: 0 1rem;
+
+  @include respond(mobile) {
+    padding: 0 2rem;
+  }
+
+  @include respond(tablet) {
+    padding: 0;
   }
 }
 
@@ -22,18 +61,17 @@
   margin: 1.5em 0 3.5em 0;
 }
 
-.intro {
-  text-align: center;
-  font-style: italic;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-}
-
 .section {
-  margin: 3em 0;
+  margin: 0 0 3em 0;
+  padding: 0 1rem;
+
+  @include respond(mobile) {
+    padding: 0 2rem;
+  }
+
+  @include respond(tablet) {
+    padding: 0;
+  }
 
   h2 {
     font-size: $font-size--x-large;
@@ -48,6 +86,14 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  &__imagetop {
+    margin: 0;
+  }
+
+  &__imagebottom {
+    margin: 0 0 3em 0;
   }
 }
 

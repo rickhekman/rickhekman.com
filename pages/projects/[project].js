@@ -32,7 +32,7 @@ export default function ProjectDetailPage() {
           alt={project.alt}
           width={900}
           height={900}
-          className={styles.image}
+          className={`${styles.image} ${styles.image__cover}`}
           loading="lazy"
         />
         <p className={styles.intro}>
@@ -41,35 +41,40 @@ export default function ProjectDetailPage() {
         <div className={styles.tags}>
           <TagsList items={project.tags}/>
         </div>
+
         <section className={styles.section}>
           <h2>About</h2>
           <div dangerouslySetInnerHTML={{ __html: project.about}} className={styles.about}></div>
         </section>
-        <section className={styles.section}>
+
+        <section className={`${styles.section} ${styles.section__imagetop}`}>
           <h2>Preview</h2>
-          <Image src={'/' + project.preview}
-            alt={project.previewalt}
-            width={900}
-            height={900}
-            className={styles.image}
-            loading="lazy"
-          />
-          <div>
-            <p>{project.previewtext}</p>
-          </div>
+        </section>
+        <Image src={'/' + project.preview}
+          alt={project.previewalt}
+          width={900}
+          height={900}
+          className={`${styles.image} ${styles.image__preview}`}
+          loading="lazy"
+        />
+        <section className={`${styles.section} ${styles.section__imagebottom}`}>
+          <p>{project.previewtext}</p>
           <div className={styles.preview__buttons}>
             <GreenButton link={project.url} text="Demo"/>
             <GreenButton link={project.source} text="Source code"/>
           </div>
         </section>
+
         <section className={styles.section}>
           <h2>Build with</h2>
           <div dangerouslySetInnerHTML={{ __html: project.tools}} className={styles.tools}></div>
         </section>
+
         <section className={styles.section}>
           <h2>License</h2>
           <a href={project.license} target='_blank' rel='noopener noreferrer'><p>Beerware</p></a>
         </section>
+
       </div>
     </LayoutTop>
   )
