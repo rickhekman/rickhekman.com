@@ -33,7 +33,7 @@ export default function ProjectDetailPage() {
           width={900}
           height={900}
           className={`${styles.image} ${styles.image__cover}`}
-          loading="lazy"
+          priority
         />
         <p className={styles.intro}>
           {project.intro}
@@ -47,17 +47,15 @@ export default function ProjectDetailPage() {
           <div dangerouslySetInnerHTML={{ __html: project.about}} className={styles.about}></div>
         </section>
 
-        <section className={`${styles.section} ${styles.section__imagetop}`}>
-          <h2>Preview</h2>
-        </section>
         <Image src={'/' + project.preview}
           alt={project.previewalt}
           width={900}
           height={900}
-          className={`${styles.image} ${styles.image__preview}`}
-          loading="lazy"
+          className={styles.image}
         />
-        <section className={`${styles.section} ${styles.section__imagebottom}`}>
+
+        <section className={styles.section}>
+          <h2>Preview</h2>
           <p>{project.previewtext}</p>
           <div className={styles.preview__buttons}>
             <GreenButton link={project.url} text="Demo"/>
@@ -74,7 +72,6 @@ export default function ProjectDetailPage() {
           <h2>License</h2>
           <a href={project.license} target='_blank' rel='noopener noreferrer'><p>Beerware</p></a>
         </section>
-
       </div>
     </LayoutTop>
   )
