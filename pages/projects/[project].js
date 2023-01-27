@@ -33,7 +33,7 @@ export default function ProjectDetailPage() {
           width={900}
           height={900}
           className={`${styles.image} ${styles.image__cover}`}
-          loading="lazy"
+          priority
         />
         <p className={styles.intro}>
           {project.intro}
@@ -51,8 +51,7 @@ export default function ProjectDetailPage() {
           alt={project.previewalt}
           width={900}
           height={900}
-          className={`${styles.image} ${styles.image__preview}`}
-          loading="lazy"
+          className={styles.image}
         />
 
         <section className={styles.section}>
@@ -73,7 +72,6 @@ export default function ProjectDetailPage() {
           <h2>License</h2>
           <a href={project.license} target='_blank' rel='noopener noreferrer'><p>Beerware</p></a>
         </section>
-
       </div>
     </LayoutTop>
   )
