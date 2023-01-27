@@ -15,7 +15,7 @@ export default function Footer() {
   let { t } = useTranslation();
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <footer className={styles.footer}>
         <div className={styles.contact}>
           <div className={styles.text}>
@@ -44,6 +44,6 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   )
 };

@@ -3,8 +3,6 @@ import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
 
-import styles from './Layout.module.scss';
-
 export default function Layout({ children }) {
   return (
     <>
@@ -13,9 +11,9 @@ export default function Layout({ children }) {
         <title>Rick Hekman, Creative Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.wrapper}>
+      <div>
         <Header />
-        <main className={styles.main}>
+        <main>
           {children}
         </main>
         <Footer />

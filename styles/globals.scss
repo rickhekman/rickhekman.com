@@ -40,7 +40,7 @@ h1 {
   font-size: $font-size--gigantic;
   font-weight: 700;
   line-height: $line-height--small;
-  margin-top: 1vmin;
+  margin-top: 0;
   margin-bottom: 2vmin;
 }
 
@@ -48,7 +48,7 @@ h2 {
   font-size: $font-size--huge;
   font-weight: 700;
   line-height: $line-height--small;
-  margin-top: 1vmin;
+  margin-top: 0;
   margin-bottom: 2vmin;
 }
 
@@ -56,7 +56,7 @@ h3 {
   font-size: $font-size--x-large;
   font-weight: 700;
   line-height: $line-height--small;
-  margin-top: 1vmin;
+  margin-top: 0;
   margin-bottom: 2vmin;
 }
 
@@ -64,7 +64,7 @@ h4 {
   font-size: $font-size--large;
   font-weight: 700;
   line-height: $line-height--small;
-  margin-top: 1vmin;
+  margin-top: 0;
   margin-bottom: 2vmin;
 }
 
@@ -72,7 +72,7 @@ h5 {
   font-size: $font-size--medium;
   font-weight: 700;
   line-height: $line-height--small;
-  margin-top: 1vmin;
+  margin-top: 0;
   margin-bottom: 1vmin;
 }
 
@@ -80,12 +80,12 @@ h6 {
   font-size: $font-size--small;
   font-weight: 700;
   line-height: $line-height--small;
-  margin-top: 1vmin;
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 1vmin;
 }
 
 p {
-  margin-top: .75em;
+  margin-top: 0;
   margin-bottom: .75em;
   font-size: $font-size--medium;
 }
