@@ -1,0 +1,9 @@
+{
+
+  "projects": [
+
+    { "id": "proyecto-un", "title": "Proyecto un", "intro": "Este es el contenido del primer proyecto", "tags": ["React", "Full Stack"]  },
+
+    { "id": "proyecto-dos", "title": "Proyecto dos", "intro": "Este es el contenido del segundo proyecto", "tags": ["WordPresss", "front end"]  }
+  ]
+}
