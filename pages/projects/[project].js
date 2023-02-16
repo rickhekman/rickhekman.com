@@ -1,19 +1,24 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
+import useTranslation from 'next-translate/useTranslation';
 
 import TagsList from "../../components/Projects/Tags-list";
 import LayoutTop from "../../components/Layout-top";
 import GreenButton from "../../components/GreenButton";
 
-import { getProjectById } from "../../data/projects-data";
+import {  GetProjectById }  from ".";
 
 import styles from "./Project.module.scss";
 
 export default function ProjectDetailPage() {
 
+  const { t } = useTranslation();
+
   const router = useRouter();
   const projectId = router.query.project;
-  const project = getProjectById(projectId);
+  const project = GetProjectById(projectId);
+
+  console.log("PROJECT", project);
 
   if (!project) {
 
@@ -25,9 +30,12 @@ export default function ProjectDetailPage() {
   };
 
   return (
+
     <LayoutTop>
       <div className={styles.container}>
+
         <h1 className={styles.title}>{project.title}</h1>
+
         <Image src={'/' + project.image}
           alt={project.alt}
           width={900}
@@ -43,7 +51,7 @@ export default function ProjectDetailPage() {
         </div>
 
         <section className={styles.section}>
-          <h2>About</h2>
+          <h2>{t("project-page:about")}</h2>
           <div dangerouslySetInnerHTML={{ __html: project.about}} className={styles.about}></div>
         </section>
 
@@ -55,7 +63,7 @@ export default function ProjectDetailPage() {
         />
 
         <section className={styles.section}>
-          <h2>Preview</h2>
+          <h2>{t("project-page:preview")}</h2>
           <p>{project.previewtext}</p>
           <div className={styles.preview__buttons}>
             <GreenButton link={project.url} text="Demo"/>
@@ -64,15 +72,17 @@ export default function ProjectDetailPage() {
         </section>
 
         <section className={styles.section}>
-          <h2>Build with</h2>
+          <h2>{t("project-page:build")}</h2>
           <div dangerouslySetInnerHTML={{ __html: project.tools}} className={styles.tools}></div>
         </section>
 
         <section className={styles.section}>
-          <h2>License</h2>
+          <h2>{t("project-page:license")}</h2>
           <a href={project.license} target='_blank' rel='noopener noreferrer'><p>Beerware</p></a>
         </section>
+
       </div>
     </LayoutTop>
   )
 };
+
