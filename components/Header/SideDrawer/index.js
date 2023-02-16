@@ -38,7 +38,6 @@ export default function SideDrawer(props) {
               <LocaleSwitcher />
             </li>
           </ul>
-
         </nav>
       </div>
     </>

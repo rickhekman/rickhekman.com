@@ -6,6 +6,8 @@ export default function ProjectsList(props) {
 
   const { items } = props;
 
+
+
   return <ul className={styles.list}>
     {
       items.map(project => <ProjectItem
