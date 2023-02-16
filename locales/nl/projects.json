@@ -2,8 +2,21 @@
 
   "projects": [
 
-    { "id": "project-een", "title": "Project een", "intro": "Dit is de inhoud van project een", "tags": ["React", "Full Stack"]  },
-
-    { "id": "project-twee", "title": "Project twee", "intro": "Dit is de inhoud van het tweede project", "tags": ["WordPresss", "front end"]  }
+    {
+      "id": "stekjesruil-graduation",
+      "title": "Stekjesruil - Afstudeerproject",
+      "image": "images/projects/stekjesruil-grad.webp",
+      "alt": "Stekjesruil",
+      "intro": "Webapplicatie gemaakt tijdens de Full Stack Development bootcamp van Codaisseur Academy Amsterdam.",
+      "url": "https://stekjesruil.netlify.app/",
+      "tags": ["React", "Full Stack"],
+      "preview": "images/projects/stekjesruil-grad-preview.webp",
+      "previewalt": "Stekjesruil app preview",
+      "previewtext": "De app wordt gehost op Netlify. Je kunt (fictieve) evenementen en stekjes bekijken, inloggen als je lid bent.",
+      "about": "<p>Vanuit mijn passie voor planten ben ik begonnen met het organiseren van Stekjesruil evenementen. Het is een evenement om plantenstekken te ruilen, gelijkgestemden te ontmoeten en ideeën uit te wisselen. Het wordt elke keer op een andere locatie in Den Haag georganiseerd.</p><p>Voor het Codaisseur Academy afstudeerproject hadden we een week de tijd om een Full Stack App naar keuze te ontwikkelen. Omdat Stekjesruil gerelateerd is aan het idee van open source en delen met elkaar, leek het me interessant om mijn project daarvoor te maken.</p><p>Mijn doel was dat via de website plantenliefhebbers op de hoogte worden gehouden van aankomende evenementen, informatie, plantenstekken kunnen uitwisselen en een account kunnen aanmaken. Helaas is een week te weinig tijd om het hele project af te ronden</p><h5>Lijst met verbeterpunten, ontbrekende functies:</h5><ul><li><p>Responsief ontwerp.</p></li><li><p>Registratiemogelijkheid</p></li><li><p>Systeem om plantenstekken te ruilen.</p></li><li><p>Bewerk de opties als beheerder.</p></li><li><p>De mogelijkheid om fotoalbums te maken van (afgelopen) evenementen met behulp van Cloudenary.</p></li><li><p>Toegankelijkheid.</p></li></ul>",
+      "source": "https://github.com/rickhekman/stekjesruil-frontend",
+      "tools": "<ul><li><p><a href='https://reactjs.org/' target='_blank' rel='noopener noreferrer'>React</a> - Een JavaScript-bibliotheek voor het bouwen van gebruikersinterfaces.</p></li><li><p><a href='https://react.i18next.com/' target='_blank' rel='noopener noreferrer'>React i18next</a>  - Internationalisering voor React.</p></li><li><p><a href='https://redux.js.org/' target='_blank' rel='noopener noreferrer'>Redux</a> - State container voor JavaScript apps.</p></li><li><p><a href='https://axios-http.com/' target='_blank' rel='noopener noreferrer'>Axios</a> - Een promise gebaseerde HTTP-client voor de browser en node.js.</p></li><li><p><a href='https://sass-lang.com/' target='_blank' rel='noopener noreferrer'>Sass</a> - CSS met superkrachten.</p></li><li><p><a href='https://expressjs.com/' target='_blank' rel='noopener noreferrer'>Express</a> - Node.js web applicatie framework.</p></li><li><p><a href='https://sequelize.org/' target='_blank' rel='noopener noreferrer'>Sequelize</a>  - Sequelize ORM is een promise-based Node.js ORM voor Postgres.</p></li><li><p><a href='https://www.postgresql.org/' target='_blank' rel='noopener noreferrer'>PostgreSQL</a> - PostgreSQL is een krachtig, open source object-relationeel databasesysteem.</p></li><li><p><a href='https://www.npmjs.com/package/bcrypt' target='_blank' rel='noopener noreferrer'>Bcrypt</a> - Een bibliotheek om je te helpen bij het hashen van wachtwoorden.</p></li></ul>",
+      "license": "https://en.wikipedia.org/wiki/Beerware"
+    }
   ]
 }

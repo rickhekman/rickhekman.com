@@ -6,14 +6,17 @@ import LayoutTop from "../../components/Layout-top";
 export default function Projects() {
 
   const { t } = useTranslation();
-
-
   const projects = t('projects:projects', {}, { returnObjects: true });
 
-  console.log("Projects", projects);
   return (
     <LayoutTop>
         <ProjectsList items={projects} />
     </LayoutTop>
   )
+}
+
+export function GetProjectById(id) {
+  const { t } = useTranslation();
+  const projects = t('projects:projects', {}, { returnObjects: true });
+  return projects.find((project) => project.id === id);
 }
