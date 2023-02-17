@@ -15,7 +15,7 @@ export default function Metadata() {
             url: 'images/seo/rickhekman.webp',
             width: 1200,
             height: 630,
-            alt: 'Rick Hekman website screenshot',
+            alt: 'Rick Hekman portfolio website',
             type: 'image/webp',
           }
         ]
