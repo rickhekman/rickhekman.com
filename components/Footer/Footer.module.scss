@@ -110,9 +110,6 @@
 
   p {
     margin-bottom: 0;
-    @include respond(mobile) {
-      margin-bottom: 1.5vmin;
-    }
   }
 }
 

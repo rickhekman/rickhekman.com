@@ -31,13 +31,15 @@
     display: none;
   }
 
-  &:hover {
-    svg:first-child {
-      display: none;
-    }
+  @include respond(tablet) {
+    &:hover {
+      svg:first-child {
+        display: none;
+      }
 
-    svg:last-child {
-      display: block;
+      svg:last-child {
+        display: block;
+      }
     }
   }
 }

@@ -4,13 +4,22 @@ export default function Metadata() {
   <>
     <NextSeo
       title="Rick Hekman, Creative Developer"
-      description="A creative developer and photographic designer portfolio website"
+      description="A creative developer portfolio website"
       openGraph={{
         type: 'website',
-        url: 'https://rickhekman.vercel.app/',
+        url: 'https://www.rickhekman.com/',
         title: "Rick Hekman, Creative Developer",
-        description: "A creative developer and photographic designer portfolio website",
+        description: "A creative developer portfolio website",
+        images: [
+          {
+            url: 'images/seo/rickhekman.webp',
+            width: 800,
+            height: 600,
+            alt: 'Rick Hekman website screenshot',
+            type: 'image/webp',
+          }
+        ]
       }}
     />
   </>
-}
+};

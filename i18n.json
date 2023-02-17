@@ -3,7 +3,7 @@
   "defaultLocale" : "en",
   "pages": {
     "*": ["footer", "menu", "title", "project-page"],
-    "/projects": ["projects"],
+    "/projects": ["projects", "projects-overview"],
     "/projects/[project]": ["projects"]
   }
 }
