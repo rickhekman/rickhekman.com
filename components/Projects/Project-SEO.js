@@ -14,8 +14,8 @@ export default function ProjectMetadata(props) {
         images: [
           {
             url: {imageUrl},
-            width: 800,
-            height: 600,
+            width: 1200,
+            height: 630,
             alt: {alt},
             type: 'image/webp',
           }
