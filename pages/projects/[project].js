@@ -18,8 +18,6 @@ export default function ProjectDetailPage() {
   const projectId = router.query.project;
   const project = GetProjectById(projectId);
 
-  console.log("PROJECT", project);
-
   if (!project) {
 
     return (
@@ -85,4 +83,3 @@ export default function ProjectDetailPage() {
     </LayoutTop>
   )
 };
-
