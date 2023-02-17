@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import useTranslation from 'next-translate/useTranslation';
 
 import ProjectMetadata from '../../components/Projects/Project-SEO';
@@ -11,16 +12,18 @@ export default function Projects() {
 
   return (
     <>
-    <ProjectMetadata
-      url={t('projects-overview:seo-url')}
-      title={t('projects-overview:seo-title')}
-      description={t('projects-overview:seo-description')}
-      imageUrl={t('projects-overview:seo-image-url')}
-      alt={t('projects-overview:seo-alt')}
-    />
-    <LayoutTop>
-        <ProjectsList items={projects} />
-    </LayoutTop>
+      <Head>
+        <ProjectMetadata
+          url={t('projects-overview:seourl')}
+          title={t('projects-overview:seotitle')}
+          description={t('projects-overview:seodescription')}
+          imageUrl={t('projects-overview:seoimageurl')}
+          alt={t('projects-overview:seoalt')}
+        />
+      </Head>
+      <LayoutTop>
+          <ProjectsList items={projects} />
+      </LayoutTop>
     </>
 
   )

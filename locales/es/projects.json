@@ -17,11 +17,11 @@
       "source": "https://github.com/rickhekman/stekjesruil-frontend",
       "tools": "<ul><li><p><a href='https://reactjs.org/' target='_blank' rel='noopener noreferrer'>React</a> - Una biblioteca JavaScript para crear interfaces de usuario.</p></li><li><p><a href='https://react.i18next.com/' target='_blank' rel='noopener noreferrer'>React i18next</a>  - Internacionalización para React.</p></li><li><p><a href='https://redux.js.org/' target='_blank' rel='noopener noreferrer'>Redux</a> - Contenedor de estados para aplicaciones JavaScript.</p></li><li><p><a href='https://axios-http.com/' target='_blank' rel='noopener noreferrer'>Axios</a> - Cliente HTTP basado en promesas para el navegador y node.js.</p></li><li><p><a href='https://sass-lang.com/' target='_blank' rel='noopener noreferrer'>Sass</a> - CSS con superpoderes.</p></li><li><p><a href='https://expressjs.com/' target='_blank' rel='noopener noreferrer'>Express</a> - Framework de aplicaciones web Node.js.</p></li><li><p><a href='https://sequelize.org/' target='_blank' rel='noopener noreferrer'>Sequelize</a>  - Sequelize ORM es un ORM basado en promesas de Node.js para Postgres.</p></li><li><p><a href='https://www.postgresql.org/' target='_blank' rel='noopener noreferrer'>PostgreSQL</a> - PostgreSQL es un potente sistema de base de datos relacional por objetos de código abierto.</p></li><li><p><a href='https://www.npmjs.com/package/bcrypt' target='_blank' rel='noopener noreferrer'>Bcrypt</a> - Una biblioteca que te ayudará a extraer contraseñas.</p></li></ul>",
       "license": "https://en.wikipedia.org/wiki/Beerware",
-      "seo-url": "https://www.rickhekman.com/es/projects/stekjesruil-graduation",
-      "seo-title": "Stekjesruil Proyecto de graduación",
-      "seo-description": "Stekjesruil Proyecto de graduación creado durante el Full Stack Development bootcamp en Codaisseur Academy Amsterdam.",
-      "seo-image-url": "images/projects/seo/stekjesruil-graduation.webp",
-      "seo-alt": "Stekjesruil proyecto de graduación"
+      "seourl": "https://www.rickhekman.com/es/projects/stekjesruil-graduation",
+      "seotitle": "Stekjesruil Proyecto de graduación",
+      "seodescription": "Stekjesruil Proyecto de graduación creado durante el Full Stack Development bootcamp en Codaisseur Academy Amsterdam.",
+      "seoimage-url": "images/projects/seo/stekjesruil-graduation.webp",
+      "seoalt": "Stekjesruil proyecto de graduación"
     }
   ]
 }
