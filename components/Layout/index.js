@@ -1,3 +1,4 @@
+import Metadata from '../Metadata';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
@@ -10,6 +11,7 @@ export default function Layout({ children }) {
 
   return (
     <>
+      <Metadata />
       <Head>
         <title>{t('title')}</title>
         <link rel="icon" href="/favicon.ico" />
