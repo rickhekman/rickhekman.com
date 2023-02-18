@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 import useTranslation from 'next-translate/useTranslation';
+import { NextSeo } from "next-seo";
 
 import TagsList from "../../components/Projects/Tags-list";
 import LayoutTop from "../../components/Layout-top";
@@ -18,6 +19,11 @@ export default function ProjectDetailPage() {
   const projectId = router.query.project;
   const project = GetProjectById(projectId);
 
+  const seoTitle = project.seotitle;
+  const seoDescription = project.seodescription;
+  const seoImageUrl = project.seoimageurl;
+  const seoAlt = project.seoalt;
+
   if (!project) {
 
     return (
@@ -29,7 +35,25 @@ export default function ProjectDetailPage() {
 
   return (
     <>
-
+      <NextSeo
+        title={seoTitle}
+        description={seoDescription}
+        openGraph={{
+          type: 'website',
+          url: 'https://www.rickhekman.com/',
+          title: seoTitle,
+          description: seoDescription,
+          images: [
+            {
+              url: seoImageUrl,
+              width: 1200,
+              height: 630,
+              alt: seoAlt,
+              type: 'image/webp',
+            }
+          ]
+        }}
+      />
       <LayoutTop>
         <div className={styles.container}>
 
