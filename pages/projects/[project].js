@@ -1,9 +1,7 @@
-import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import useTranslation from 'next-translate/useTranslation';
 
-import ProjectMetadata from "../../components/Projects/Project-SEO";
 import TagsList from "../../components/Projects/Tags-list";
 import LayoutTop from "../../components/Layout-top";
 import GreenButton from "../../components/GreenButton";
@@ -31,15 +29,6 @@ export default function ProjectDetailPage() {
 
   return (
     <>
-      <Head>
-        <ProjectMetadata
-          url={project.seourl}
-          title={project.seotitle}
-          description={project.seodescription}
-          imageUrl={project.seoimageurl}
-          alt={project.seoalt}
-        />
-      </Head>
 
       <LayoutTop>
         <div className={styles.container}>
