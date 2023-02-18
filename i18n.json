@@ -2,8 +2,8 @@
   "locales": ["en", "es", "nl"],
   "defaultLocale" : "en",
   "pages": {
-    "*": ["footer", "menu", "title", "project-page", "head"],
-    "/projects": ["projects", "projects-overview"],
-    "/projects/[project]": ["projects"]
+    "*": ["footer", "menu", "title", "head"],
+    "/projects": ["projects"],
+    "/projects/[project]": ["projects", "project-page"]
   }
 }
