@@ -36,7 +36,7 @@ export default function Layout({ children }) {
       />
       <Head>
         <title>{t('title')}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.gif" type="image/gif"/>
       </Head>
 
       <div>
