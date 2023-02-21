@@ -27,14 +27,14 @@ export default function ThemeSwitch() {
     const currentTheme = theme === "system" ? systemTheme : theme;
     if (currentTheme === "dark") {
       return (
-        <button onClick={() => setTheme('light')} className={`${styles.button} ${styles.moon}`} type="button" aria-describedby={t('menu:lightmode')}>
+        <button onClick={() => setTheme('light')} id="lightmode" className={`${styles.button} ${styles.moon}`} type="button" aria-label={t('menu:lightmode')}>
           <MoonIcon />
           <MoonFillIcon />
         </button>
       )
     }
     return (
-      <button onClick={() => setTheme('dark')} className={`${styles.button} ${styles.sun}`} type="button" aria-describedby={t('menu:darkmode')}>
+      <button onClick={() => setTheme('dark')} id="darkmode" className={`${styles.button} ${styles.sun}`} type="button" aria-label={t('menu:darkmode')}>
         <SunIcon />
         <SunFillIcon />
       </button>
